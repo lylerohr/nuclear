@@ -7,16 +7,18 @@
 	
 	TODO: 
 	1. Create a nuclear-config.scss
+		> Allows user to include/exclude scss files using a map
+	2. Create easy responsive font manipulation based on 2 types of text Display and Standard
+		> Display line-height 1.1*font-size
+		> Standard line-height 1.3*font-size
+	3. Create a way to set button/text-button line heights equal to desired button height to allow for centering text vertically
 
 ************************************/
 
+@import "partials/libraries/libraries"; //must be first
 
-
-@import "partials/config/functions/functions";
 @import "partials/config/structure/scaffolding";
 @import "partials/config/theme/theme";
-
-@import "partials/libraries/libraries";
 
 @import "partials/atoms/atoms";
 @import "partials/molecules/molecules";
@@ -32,6 +34,6 @@
 
 h1 {
 	color:  color(brand-primary);
-	@extend %massive;
+	@extend %small;
 	@extend %type-style-heading;
 }

@@ -8,6 +8,11 @@
 *******/
 	
 	
+/************************************
+	
+	TYPOGRAPHY
+
+************************************/
 
 // sets font stacks
 $font-stack: (
@@ -16,20 +21,28 @@ $font-stack: (
 	code: #{'source code pro', monospace}
 );
 
-// sets base font sizes
+// sets relative base font sizes
 // unitless
 $font-sizes: (
 	massive: 6,
 	giant: 4,
-	very-big: 3,
+	extra-big: 3,
 	big: 2,
 	base: 1,
 	small: .875,
-	very-small: .5
+	extra-small: .5
 );
 
-// color pallete
-// can take any valid color value- hex, rgb(), srgb(), etc.
+/************************************
+	
+	COLORS
+
+************************************/
+
+// Can take any valid color value - hex, rgb(), srgb(), etc.
+// Extendable - you can add/subtract as many colors as you need for your application
+// Utilizes - color(<COLORNAME>, <TONE>optional, <FUNCTION>optional);
+
 $colors: (
     brand-primary: #cd453d,
     brand-secondary: #aeaeae,
@@ -38,11 +51,54 @@ $colors: (
     gray: #777777
 );
 
-// tone presets for colors
+// Tone presets for colors
 // accepts number, utilizes the Sass lighten() and darken() functions
 $tones: (
 	extra-light: 20%,
 	light: 10%,
 	dark: 10%,
 	extra-dark: 20%
-)
+);
+
+
+/************************************
+	
+	BUTTONS
+
+************************************/
+
+
+$buttons: (
+	button: (
+		margin: #{1rem, 0},
+		padding: #{0 10px},
+		font-family: font-family(primary),
+		font-size: 1rem,
+		line-height: 2rem,
+		color: color(brand-primary),
+		background: transparent,
+		border: 1px solid color(brand-primary),
+		border-radius: .25rem,
+		transition: transition(fast)
+	),
+	text-button: (
+		margin: #{1rem, 0},
+		padding: #{0 10px},
+		font-family: font-family(primary),
+		font-size: 1rem,
+		line-height: 2rem,
+		color: color(brand-primary),
+		background: transparent,
+		border: 1px solid color(brand-primary),
+		border-radius: .25rem,
+		transition: transition(fast)
+	)
+);
+
+
+/************************************
+	
+	FORMS
+
+************************************/
+
