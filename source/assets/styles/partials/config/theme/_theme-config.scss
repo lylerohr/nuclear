@@ -1,0 +1,48 @@
+/*******
+	
+	NuclearSass Framework
+	Theme Configuration
+	
+	v0.1 alpha
+	
+*******/
+	
+	
+
+// sets font stacks
+$font-stack: (
+	primary: #{'Helvetica Neue', Helvetica, Arial, sans-serif},
+	secondary: #{Georgia, 'Times New Roman', sans-serif},
+	code: #{'source code pro', monospace}
+);
+
+// sets base font sizes
+// unitless
+$font-sizes: (
+	massive: 6,
+	giant: 4,
+	very-big: 3,
+	big: 2,
+	base: 1,
+	small: .875,
+	very-small: .5
+);
+
+// color pallete
+// can take any valid color value- hex, rgb(), srgb(), etc.
+$colors: (
+    brand-primary: #cd453d,
+    brand-secondary: #aeaeae,
+    brand-tertiary: #dad7c2,
+    cta: #cd453d,
+    gray: #777777
+);
+
+// tone presets for colors
+// accepts number, utilizes the Sass lighten() and darken() functions
+$tones: (
+	extra-light: 20%,
+	light: 10%,
+	dark: 10%,
+	extra-dark: 20%
+)

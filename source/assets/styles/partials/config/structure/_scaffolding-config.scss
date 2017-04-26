@@ -1,0 +1,19 @@
+// Base scale for rem
+$scale: 16px;
+
+// @media breakpoints
+$breakpoints: (
+  extra-small: 576px,
+  small: 768px,
+  medium: 992px,
+  large: 1200px
+);
+
+// z-index 
+$z-layers: (
+  bottomless-pit: -9999,
+  default: 1,
+  dropdown: 3000,
+  overlay: 4000,
+  modal: 4001
+);

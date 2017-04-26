@@ -1,0 +1,90 @@
+/*************************
+	
+	MAP FUNCTIONS - STRUCTURE LAYER
+
+*************************/
+
+// @media breakpoints
+@mixin respond-to($breakpoint) { 
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+@function breakpoint($breakpoint) {
+	@if map-has-key($breakpoints, $breakpoint) {
+	 	@return map-get($breakpoints, $breakpoint);
+	 } @else {
+		 @warn "No such breakpoint- '#{$breakpoint}.";
+	 }
+}
+
+// z-index
+@function z($key) {
+  @if map-has-key($z-layers, $key) {
+    @return map-get($z-layers, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $z-layers.";
+  @return null;
+}
+
+
+/*************************
+	
+	MAP FUNCTIONS - THEME LAYER
+
+*************************/
+
+// theme : colors
+@function color($color, $tone: null, $function: null) {
+    @if $tone == "extra-light" {
+	    @return lighten(map-get($colors, $color), map-get($tones, $tone));
+	} @else if $tone == "light" {
+		 @return lighten(map-get($colors, $color), map-get($tones, $tone));
+	} @else if $tone == "dark" {
+		 @return darken(map-get($colors, $color), map-get($tones, $tone));
+	} @else if $tone == "extra-dark" {
+		@return darken(map-get($colors, $color), map-get($tones, $tone));
+	} @else if type-of($tone) == number {
+		@if $function == "lighten" {
+			@return lighten(map-get($colors, $color), $tone);
+		} @else if $function == "darken" {
+			@return darken(map-get($colors, $color), $tone);
+		}
+	} @else {
+		@return map-get($colors, $color);
+	}
+}
+
+// theme : type
+@function font-family($font) {
+	 @if map-has-key($font-stack, $font) {
+	 	@return map-get($font-stack, $font);
+	 } @else {
+		 @warn "No such font-family- '#{$font}.";
+	 }
+}
+
+@function font-size($size) {
+	@if map-has-key($font-sizes, $size) {
+		@return map-get($font-sizes, $size);
+	} @else {
+		@warn "No such font size- - '#{$font}.";
+	}
+}
+
+@function lh($size) {
+	 @if map-has-key($lh, $size) {
+	 	@return map-get($lh, $size);
+	 } @else {
+		 @warn "No such lineheight size- '#{$size}.";
+	 }
+}

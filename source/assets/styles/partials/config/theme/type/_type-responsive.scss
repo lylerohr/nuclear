@@ -1,0 +1,247 @@
+
+// line-height, unitless
+$lh: (
+  extra-small: 1.1,
+  small: 1.2,
+  medium: 1.3,
+  large: 1.4,
+  extra-large: 1.45
+);
+
+
+/* 
+	
+	$type-sizes 
+		> type-size name 
+			> screen-size name
+			
+	primarily utilized to create type size classes found in _type-sizes.scss
+	
+*/
+	
+$type-sizes: (
+  massive: (
+    extra-small: (
+      font-size: font-size(massive)*.75,
+      line-height: lh(extra-small),
+      margin-top: lh(extra-small),
+      margin-bottom: lh(extra-small)
+    ),
+    small: (
+      font-size: font-size(massive)*.875,
+      line-height: lh(small)*2.25,
+      margin-top: lh(small)*0,
+      margin-bottom: lh(small)
+    ),
+    medium: (
+      font-size: font-size(massive),
+      line-height: lh(medium)*2.25,
+      margin-top: lh(medium)*0,
+      margin-bottom: lh(medium)
+    ),
+    large: (
+      font-size: font-size(massive)*1.1,
+      line-height: lh(large)*2.25,
+      margin-top: lh(large)*0,
+      margin-bottom: lh(large)
+    ),
+    extra-large: (
+      font-size: font-size(massive)*1.1,
+      line-height: lh(extra-large)*2.25,
+      margin-top: lh(extra-large)*0,
+      margin-bottom: lh(extra-large)
+    )
+  ),
+  giant: (
+    extra-small: (
+      font-size: rem(font-size(giant)),
+      line-height: lh(extra-small),
+      margin-top: lh(extra-small),
+      margin-bottom: lh(extra-small)
+    ),
+    small: (
+      font-size: 48.829,
+      line-height: lh(small)*2.25,
+      margin-top: lh(small)*0,
+      margin-bottom: lh(small)
+    ),
+    medium: (
+      font-size: 54.931,
+      line-height: lh(medium)*2.25,
+      margin-top: lh(medium)*0,
+      margin-bottom: lh(medium)
+    ),
+    large: (
+      font-size: 48.829,
+      line-height: lh(large)*2.25,
+      margin-top: lh(large)*0,
+      margin-bottom: lh(large)
+    ),
+    extra-large: (
+      font-size: 48.829,
+      line-height: lh(extra-large)*2.25,
+      margin-top: lh(extra-large)*0,
+      margin-bottom: lh(extra-large)
+    )
+  ),
+  extra-big: (
+    extra-small: (
+      font-size: 34.18,
+      line-height: lh(extra-small)*1.75,
+      margin-top: lh(extra-small)*1.5,
+      margin-bottom: lh(extra-small)*0.5
+    ),
+    small: (
+      font-size: 39.063,
+      line-height: lh(small)*1.75,
+      margin-top: lh(small)*1.5,
+      margin-bottom: lh(small)*0.5
+    ),
+    medium: (
+      font-size: 43.945,
+      line-height: lh(medium)*1.75,
+      margin-top: lh(medium)*1.5,
+      margin-bottom: lh(medium)*0.5
+    ),
+    large: (
+      font-size: 48.829,
+      line-height: lh(large)*2.25,
+      margin-top: lh(large)*0,
+      margin-bottom: lh(large)
+    ),
+    extra-large: (
+      font-size: 48.829,
+      line-height: lh(extra-large)*2.25,
+      margin-top: lh(extra-large)*0,
+      margin-bottom: lh(extra-large)
+    )
+  ),
+  big: (
+    extra-small: (
+      font-size: 27.344,
+      line-height: lh(extra-small)*1.75,
+      margin-top: lh(extra-small)*1.5,
+      margin-bottom: lh(extra-small)*0.5
+    ),
+    small: (
+      font-size: 31.25,
+      line-height: lh(small)*1.5,
+      margin-top: lh(small)*1.5,
+      margin-bottom: lh(small)*0.5
+    ),
+    medium: (
+      font-size: 35.156,
+      line-height: lh(medium)*1.5,
+      margin-top: lh(medium)*1.5,
+      margin-bottom: lh(medium)*0.5
+    ),
+    large: (
+      font-size: 48.829,
+      line-height: lh(large)*2.25,
+      margin-top: lh(large)*0,
+      margin-bottom: lh(large)
+    ),
+    extra-large: (
+      font-size: 48.829,
+      line-height: lh(extra-large)*2.25,
+      margin-top: lh(extra-large)*0,
+      margin-bottom: lh(extra-large)
+    )
+  ),
+  base: (
+    extra-small: (
+      font-size: 27.344,
+      line-height: lh(extra-small)*1.75,
+      margin-top: lh(extra-small)*1.5,
+      margin-bottom: lh(extra-small)*0.5
+    ),
+    small: (
+      font-size: 31.25,
+      line-height: lh(small)*1.5,
+      margin-top: lh(small)*1.5,
+      margin-bottom: lh(small)*0.5
+    ),
+    medium: (
+      font-size: 35.156,
+      line-height: lh(medium)*1.5,
+      margin-top: lh(medium)*1.5,
+      margin-bottom: lh(medium)*0.5
+    ),
+    large: (
+      font-size: 48.829,
+      line-height: lh(large)*2.25,
+      margin-top: lh(large)*0,
+      margin-bottom: lh(large)
+    ),
+    extra-large: (
+      font-size: 48.829,
+      line-height: lh(extra-large)*2.25,
+      margin-top: lh(extra-large)*0,
+      margin-bottom: lh(extra-large)
+    )
+  ),
+  small: (
+    extra-small: (
+      font-size: 27.344,
+      line-height: lh(extra-small)*1.75,
+      margin-top: lh(extra-small)*1.5,
+      margin-bottom: lh(extra-small)*0.5
+    ),
+    small: (
+      font-size: 31.25,
+      line-height: lh(small)*1.5,
+      margin-top: lh(small)*1.5,
+      margin-bottom: lh(small)*0.5
+    ),
+    medium: (
+      font-size: 35.156,
+      line-height: lh(medium)*1.5,
+      margin-top: lh(medium)*1.5,
+      margin-bottom: lh(medium)*0.5
+    ),
+    large: (
+      font-size: 48.829,
+      line-height: lh(large)*2.25,
+      margin-top: lh(large)*0,
+      margin-bottom: lh(large)
+    ),
+    extra-large: (
+      font-size: 48.829,
+      line-height: lh(extra-large)*2.25,
+      margin-top: lh(extra-large)*0,
+      margin-bottom: lh(extra-large)
+    )
+  ),
+  extra-small: (
+    extra-small: (
+      font-size: 27.344,
+      line-height: lh(extra-small)*1.75,
+      margin-top: lh(extra-small)*1.5,
+      margin-bottom: lh(extra-small)*0.5
+    ),
+    small: (
+      font-size: 31.25,
+      line-height: lh(small)*1.5,
+      margin-top: lh(small)*1.5,
+      margin-bottom: lh(small)*0.5
+    ),
+    medium: (
+      font-size: 35.156,
+      line-height: lh(medium)*1.5,
+      margin-top: lh(medium)*1.5,
+      margin-bottom: lh(medium)*0.5
+    ),
+    large: (
+      font-size: 48.829,
+      line-height: lh(large)*2.25,
+      margin-top: lh(large)*0,
+      margin-bottom: lh(large)
+    ),
+    extra-large: (
+      font-size: 48.829,
+      line-height: lh(extra-large)*2.25,
+      margin-top: lh(extra-large)*0,
+      margin-bottom: lh(extra-large)
+    )
+  )
+);
