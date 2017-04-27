@@ -29,7 +29,7 @@
 
 *************************/
 
-// theme : colors
+// theme/olors
 @function color($color, $tone: null, $function: null) {
     @if $tone == "extra-light" {
 	    @return lighten(map-get($colors, $color), map-get($tones, $tone));
@@ -50,7 +50,7 @@
 	}
 }
 
-// theme : type
+// theme/type
 @function font-family($font) {
 	 @if map-has-key($font-stack, $font) {
 	 	@return map-get($font-stack, $font);
@@ -67,10 +67,28 @@
 	}
 }
 
+@function heading-size($size) {
+	@if map-has-key($heading-sizes, $size) {
+		@return map-get($heading-sizes, $size);
+	} @else {
+		@warn "No such heading size- - '#{$font}.";
+	}
+}
+
 @function lh($size) {
 	 @if map-has-key($lh, $size) {
 	 	@return map-get($lh, $size);
 	 } @else {
 		 @warn "No such lineheight size- '#{$size}.";
+	 }
+}
+
+
+// theme/chrome/radius
+@function radius($size) {
+	 @if map-has-key($radius, $size) {
+	 	@return map-get($radius, $size);
+	 } @else {
+		 @warn "No such radius of size- '#{$size}.";
 	 }
 }

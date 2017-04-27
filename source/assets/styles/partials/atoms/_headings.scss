@@ -1,0 +1,50 @@
+$heading: (
+	font-family: font-family(primary),
+	font-size: 2rem,
+	color: color(brand-primary),
+	background-color: transparent,
+);
+@include heading($heading);
+
+
+
+$massive-heading: (
+	name: 'massive-heading',
+	type: massive,
+	margin: #{1rem 0 2rem},
+	font-weight: 100,
+);
+@include heading($heading, $massive-heading);
+
+
+$small-heading: (
+	name: 'small-heading',
+	type: big,
+	font-weight: bold,
+);
+@include heading($heading, $small-heading);
+
+
+
+
+
+
+
+
+$massive-heading-with-subhead: (
+	name: 'massive-heading-with-subhead',
+	type: massive,
+	margin: #{1rem 0 2rem},
+	font-weight: 100,
+	display: inline-block,
+);
+@include heading($heading, $massive-heading-with-subhead);
+
+$subhead: (
+	name: 'subhead',
+	type: big,
+	display: inline-block,
+	font-weight: bold,
+	margin-left: 1rem,
+);
+@include heading($heading, $subhead);

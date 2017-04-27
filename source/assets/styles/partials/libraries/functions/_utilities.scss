@@ -41,3 +41,13 @@
 		@warn "Invalid argument for transition function - #{$speed}";
 	}
 }
+
+// map merge
+@function extend($obj, $ext-obj) {
+  @return map-merge($obj, $ext-obj);
+}
+
+// interpolate
+@function interpolate($value...) {
+	@return #{$value};
+}

@@ -1,0 +1,212 @@
+/************************************
+	
+	CONSTRUCTORS
+
+************************************/
+
+
+// button constructor
+@mixin button($default: (), $hover: (), $active: (), $modifier: ()) {
+	// default config styles
+	$default: extend((
+		display: inline-block,
+		margin: 0,
+		padding: #{1rem 2rem},
+		font-family: inherit,
+		font-weight: inherit,
+		color: color(black),
+		line-height: inherit,
+		text-align: center,
+		vertical-align: middle,
+		touch-action: manipulation,
+		cursor: pointer,
+		background-image: none,
+		background-color: transparent,
+		border-color: transparent,
+		border-width: 1px,
+		border-style: sollid,
+		white-space: nowrap,
+		/*type: base,  /* can use for preset theming within constructor */
+		name: 'button' /* used to create placeholder class name */
+	), $default);
+	
+	$modifier: extend($default, $modifier);
+	
+	// create placeholder class merging $default map styles and $modifier map styles
+	%#{map-get($modifier, name)} {
+		@each $name, $value in $modifier {
+			@if $name != type and $name != name {
+				#{$name}: #{$value};
+			}
+		}
+		&:hover {
+			@each $name, $value in $hover {
+				#{$name}: #{$value};
+			}
+		}
+		&:active,
+		&:focus {
+			@each $name, $value in $active {
+				#{$name}: #{$value};
+			}
+		}
+	}
+}
+
+
+// heading constructor
+@mixin heading($default: (), $modifier: ()) {
+	// default config styles
+	$default: extend((
+		display: block,
+		margin: 1rem 0 1.5rem,
+		padding: 0,
+		font-family: inherit,
+		font-weight: inherit,
+		color: color(black),
+		text-align: left,
+		vertical-align: inherit,
+		touch-action: auto,
+		cursor: inherit,
+		background-image: none,
+		background-color: transparent,
+		border: none,
+		white-space: normal,
+		type: base,  /* can use for preset theming within constructor */
+		name: 'heading' /* used to create placeholder class name */
+	), $default);
+	
+	$modifier: extend($default, $modifier);
+	
+	// create placeholder class merging $default map styles and $modifier map styles
+	%#{map-get($modifier, name)} {
+		@each $name, $value in $modifier {
+			@if $name != type and $name != name {
+				#{$name}: #{$value};
+			}
+		}
+		font-size: rem(map-get-deep($heading-sizes, #{map-get($modifier, type)}, extra-small, font-size));
+		line-height: rem(map-get-deep($heading-sizes, #{map-get($modifier, type)}, extra-small, line-height) * map-get-deep($heading-sizes, #{map-get($modifier, type)}, extra-small, font-size));
+		
+		
+		@media screen and (min-width: breakpoint(small)) {
+			font-size: rem(map-get-deep($heading-sizes, #{map-get($modifier, type)}, small, font-size));
+			line-height: rem(map-get-deep($heading-sizes, #{map-get($modifier, type)}, small, line-height) * map-get-deep($heading-sizes, #{map-get($modifier, type)}, small, font-size));
+		}
+		
+		@media screen and (min-width: breakpoint(medium)) {
+			font-size: rem(map-get-deep($heading-sizes, #{map-get($modifier, type)}, medium, font-size));
+			line-height: rem(map-get-deep($heading-sizes, #{map-get($modifier, type)}, medium, line-height) * map-get-deep($heading-sizes, #{map-get($modifier, type)}, medium, font-size));
+		}
+		
+		@media screen and (min-width: breakpoint(large)) {
+			font-size: rem(map-get-deep($heading-sizes, #{map-get($modifier, type)}, large, font-size));
+			line-height: rem(map-get-deep($heading-sizes, #{map-get($modifier, type)}, large, line-height) * map-get-deep($heading-sizes, #{map-get($modifier, type)}, large, font-size));
+		}
+	}
+}
+
+// text constructor
+@mixin text($default: (), $modifier: ()) {
+	// default config styles
+	$default: extend((
+		display: inline,
+		margin: 0,
+		padding: 0,
+		font-family: inherit,
+		font-weight: inherit,
+		color: color(black),
+		text-align: left,
+		vertical-align: inherit,
+		touch-action: auto,
+		cursor: inherit,
+		background-image: none,
+		background-color: transparent,
+		border: none,
+		white-space: normal,
+		type: base,  /* can use for preset theming within constructor */
+		name: 'text' /* used to create placeholder class name */
+	), $default);
+	
+	$modifier: extend($default, $modifier);
+	
+	// create placeholder class merging $default map styles and $modifier map styles
+	%#{map-get($modifier, name)} {
+		@each $name, $value in $modifier {
+			@if $name != type and $name != name {
+				#{$name}: #{$value};
+			}
+		}
+		font-size: rem(map-get-deep($type-sizes, #{map-get($modifier, type)}, extra-small, font-size));
+		line-height: rem(map-get-deep($type-sizes, #{map-get($modifier, type)}, extra-small, line-height) * map-get-deep($type-sizes, #{map-get($modifier, type)}, extra-small, font-size));
+		
+		
+		@media screen and (min-width: breakpoint(small)) {
+			font-size: rem(map-get-deep($type-sizes, #{map-get($modifier, type)}, small, font-size));
+			line-height: rem(map-get-deep($type-sizes, #{map-get($modifier, type)}, small, line-height) * map-get-deep($type-sizes, #{map-get($modifier, type)}, small, font-size));
+		}
+		
+		@media screen and (min-width: breakpoint(medium)) {
+			font-size: rem(map-get-deep($type-sizes, #{map-get($modifier, type)}, medium, font-size));
+			line-height: rem(map-get-deep($type-sizes, #{map-get($modifier, type)}, medium, line-height) * map-get-deep($type-sizes, #{map-get($modifier, type)}, medium, font-size));
+		}
+		
+		@media screen and (min-width: breakpoint(large)) {
+			font-size: rem(map-get-deep($type-sizes, #{map-get($modifier, type)}, large, font-size));
+			line-height: rem(map-get-deep($type-sizes, #{map-get($modifier, type)}, large, line-height) * map-get-deep($type-sizes, #{map-get($modifier, type)}, large, font-size));
+		}
+	}
+}
+
+
+// form input constructor
+@mixin input($default: (), $modifier: ()) {
+	// default config styles
+	$default: extend((
+		display: block,
+		margin: 1rem 0 1.5rem,
+		padding: 0,
+		font-family: inherit,
+		font-weight: inherit,
+		color: color(black),
+		text-align: left,
+		vertical-align: inherit,
+		touch-action: auto,
+		cursor: inherit,
+		background-image: none,
+		background-color: transparent,
+		border: none,
+		white-space: normal,
+		type: base,  /* can use for preset theming within constructor */
+		name: 'heading' /* used to create placeholder class name */
+	), $default);
+	
+	$modifier: extend($default, $modifier);
+	
+	// create placeholder class merging $default map styles and $modifier map styles
+	%#{map-get($modifier, name)} {
+		@each $name, $value in $modifier {
+			@if $name != type and $name != name {
+				#{$name}: #{$value};
+			}
+		}
+		font-size: rem(map-get-deep($type-sizes, #{map-get($modifier, type)}, extra-small, font-size));
+		line-height: rem(map-get-deep($type-sizes, #{map-get($modifier, type)}, extra-small, line-height) * map-get-deep($type-sizes, #{map-get($modifier, type)}, extra-small, font-size));
+		
+		
+		@media screen and (min-width: breakpoint(small)) {
+			font-size: rem(map-get-deep($type-sizes, #{map-get($modifier, type)}, small, font-size));
+			line-height: rem(map-get-deep($type-sizes, #{map-get($modifier, type)}, small, line-height) * map-get-deep($type-sizes, #{map-get($modifier, type)}, small, font-size));
+		}
+		
+		@media screen and (min-width: breakpoint(medium)) {
+			font-size: rem(map-get-deep($type-sizes, #{map-get($modifier, type)}, medium, font-size));
+			line-height: rem(map-get-deep($type-sizes, #{map-get($modifier, type)}, medium, line-height) * map-get-deep($type-sizes, #{map-get($modifier, type)}, medium, font-size));
+		}
+		
+		@media screen and (min-width: breakpoint(large)) {
+			font-size: rem(map-get-deep($type-sizes, #{map-get($modifier, type)}, large, font-size));
+			line-height: rem(map-get-deep($type-sizes, #{map-get($modifier, type)}, large, line-height) * map-get-deep($type-sizes, #{map-get($modifier, type)}, large, font-size));
+		}
+	}
+}
