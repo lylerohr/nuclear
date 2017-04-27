@@ -7,16 +7,16 @@
 	
 	TODO: 
 	1. Create a nuclear-config.scss
+		> Allows user to include/exclude scss files using a map
+	2. Create a comment design pattern
+		> Fully comment code to act as initial documentation
 
 ************************************/
 
+@import "partials/libraries/libraries"; //must be first @import
 
-
-@import "partials/config/functions/functions";
 @import "partials/config/structure/scaffolding";
 @import "partials/config/theme/theme";
-
-@import "partials/libraries/libraries";
 
 @import "partials/atoms/atoms";
 @import "partials/molecules/molecules";
@@ -24,14 +24,51 @@
 @import "partials/pages/pages";
 @import "partials/templates/templates";
 
-%type-style-heading {
-    font-family: font-family(secondary);
-    font-weight: 100;
-    text-transform: uppercase;
-}
+
+
+// TESTING GROUND
 
 h1 {
-	color:  color(brand-primary);
-	@extend %massive;
-	@extend %type-style-heading;
+	@extend %massive-heading-with-subhead;
+}
+
+h3 {
+	@extend %subhead;
+}
+
+.buttons .box {
+	@include grid-column(4);
+	text-align: center;
+}
+
+.big-button {
+	@extend %large-button;
+}
+
+.mid-button {
+	@extend %button;
+}
+
+.small-button {
+	@extend %small-button;
+}
+
+p {
+	@extend %text;
+}
+
+.blockquote {
+	@extend %blockquote;
+}
+
+.neat-container {
+	@include grid-container;
+}
+
+.text {
+	@include grid-column(8);
+}
+
+.quote {
+	@include grid-column(4);
 }

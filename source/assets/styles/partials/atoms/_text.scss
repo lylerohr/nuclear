@@ -1,0 +1,22 @@
+$text: (
+	font-family: font-family(secondary),
+	font-size: font-size(base),
+	color: color(gray, extra-dark),
+);
+
+$blockquote: (
+	name: 'blockquote',
+	type: big,
+	margin: #{1rem 0 2rem},
+	padding: 1rem,
+	font-weight: 100,
+	font-family: font-family(primary),
+	background-color: color(gray, 50%, lighten),
+	border-radius: radius(large)
+);
+
+
+
+@include text($text);
+
+@include heading($text, $blockquote);

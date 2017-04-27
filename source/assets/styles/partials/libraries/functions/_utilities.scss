@@ -1,0 +1,53 @@
+/*************************
+	
+	UTILITIES
+
+*************************/
+
+// add units
+@function rem($number) {
+	@return #{$number}rem;
+}
+
+@function em($number) {
+	@return #{$number}em;
+}
+
+@function pixel($number) {
+	@return #{$number}px;
+}
+
+@function vh($number) {
+	@return #{$number}vh;
+}
+
+@function vw($number) {
+	@return #{$number}vw;
+}
+
+// amination
+@function transition($speed: none) {
+	@if type-of($speed) == string {
+		@if $speed == fast {
+			@return 150ms;
+		} @else if $speed == medium {
+			@return 250ms;
+		} @else if $speed == slow {
+			@return 400ms;
+		} 
+	} @else if type-of ($speed) == number {
+		@return #{$speed}ms;
+	} @else {
+		@warn "Invalid argument for transition function - #{$speed}";
+	}
+}
+
+// map merge
+@function extend($obj, $ext-obj) {
+  @return map-merge($obj, $ext-obj);
+}
+
+// interpolate
+@function interpolate($value...) {
+	@return #{$value};
+}
