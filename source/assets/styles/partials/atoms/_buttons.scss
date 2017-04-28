@@ -6,7 +6,7 @@
 
 
 /************************************
-	DEFAUL BUTTON CONFIG
+	DEFAULT BUTTON CONFIG
 	
 	Use this to create your base button atom.
 	You may overwrite/extend and, all, or none of the CSS properties using the $button map.
@@ -41,7 +41,7 @@ $button-active: (
 @include button($button, $button-hover, $button-active);
 
 /************************************
-	EO DEFAUL BUTTON CONFIG
+	EO DEFAULT BUTTON CONFIG
 ************************************/
 
 
@@ -81,8 +81,6 @@ $small-button: (
 	font-size: .875rem
 );
 @include button($button, $button-hover, $button-active, $small-button);
-
-
 
 
 

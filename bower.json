@@ -34,6 +34,7 @@
   "private": true,
   "dependencies": {
     "neat": "^2.0.0",
-    "sassy-maps": "^0.4.0"
+    "sassy-maps": "^0.4.0",
+    "normalize-css": "^6.0.0"
   }
 }

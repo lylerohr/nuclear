@@ -1,50 +1,89 @@
+/************************************
+	
+	HEADINGS
+
+************************************/
+
+
+/************************************
+	DEFAULT HEADING CONFIG
+	
+	Use this to create your base heading atom(s).
+	You may overwrite/extend and, all, or none of the CSS properties using the $heading map.
+	
+************************************/
+
+// Default heading styles
+// @extend %heading
 $heading: (
 	font-family: font-family(primary),
-	font-size: 2rem,
+	size: extra-big,
 	color: color(brand-primary),
 	background-color: transparent,
 );
 @include heading($heading);
 
+/************************************
+	EO DEFAULT HEADING CONFIG
+************************************/
 
 
+/************************************
+	
+	HEADING MODIFIERS
+	
+	To create a new modifier, create a new heading map.
+	The heading map must contain a 'name' key.
+		> 'name' is used to create the placeholder class.
+	
+	Responsive Type:
+	If you want to utilize structured, responsive type, use the 'size' key.
+	
+	To instnciate, @include the heading() mixin with the fourth argument as your new heading map.
+	
+	Example:
+	
+	$NEW-heading: (
+		name: 'NEW-heading',
+		size: 'size', 
+		css-property: value, 
+	);
+	@include heading($heading, $NEW-heading);
+	
+************************************/
+
+// Heading modifiers
+// @extend %<name>
 $massive-heading: (
 	name: 'massive-heading',
-	type: massive,
+	size: massive,
 	margin: #{1rem 0 2rem},
-	font-weight: 100,
+	font-weight: 500,
 );
 @include heading($heading, $massive-heading);
 
-
 $small-heading: (
 	name: 'small-heading',
-	type: big,
+	size: big,
 	font-weight: bold,
 );
 @include heading($heading, $small-heading);
 
-
-
-
-
-
-
-
 $massive-heading-with-subhead: (
 	name: 'massive-heading-with-subhead',
-	type: massive,
+	size: massive,
 	margin: #{1rem 0 2rem},
-	font-weight: 100,
+	font-weight: 500,
 	display: inline-block,
 );
 @include heading($heading, $massive-heading-with-subhead);
 
 $subhead: (
 	name: 'subhead',
-	type: big,
+	size: big,
 	display: inline-block,
-	font-weight: bold,
+	font-weight: 100,
 	margin-left: 1rem,
+	color: color(gray, dark),
 );
 @include heading($heading, $subhead);
