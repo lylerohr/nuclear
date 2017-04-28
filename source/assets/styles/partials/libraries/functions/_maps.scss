@@ -8,7 +8,7 @@
 	@if map-has-key($breakpoints, $breakpoint) {
 	 	@return map-get($breakpoints, $breakpoint);
 	 } @else {
-		 @warn "No such breakpoint- '#{$breakpoint}.";
+		 @warn "No such breakpoint - '#{$breakpoint}.";
 	 }
 }
 
@@ -22,6 +22,21 @@
   @return null;
 }
 
+@function margin($value) {
+	 @if map-has-key($margin, $value) {
+	 	@return map-get($margin, $value);
+	 } @else {
+		 @warn "No such margin value - '#{$value}.";
+	 }
+}
+
+@function padding($value) {
+	 @if map-has-key($padding, $value) {
+	 	@return map-get($padding, $value);
+	 } @else {
+		 @warn "No such padding value - '#{$value}.";
+	 }
+}
 
 /*************************
 	
@@ -55,7 +70,7 @@
 	 @if map-has-key($font-stack, $font) {
 	 	@return map-get($font-stack, $font);
 	 } @else {
-		 @warn "No such font-family- '#{$font}.";
+		 @warn "No such font-family - '#{$font}.";
 	 }
 }
 
@@ -63,7 +78,7 @@
 	@if map-has-key($font-sizes, $size) {
 		@return map-get($font-sizes, $size);
 	} @else {
-		@warn "No such font size- - '#{$font}.";
+		@warn "No such font size - '#{$size}.";
 	}
 }
 
@@ -71,7 +86,7 @@
 	@if map-has-key($heading-sizes, $size) {
 		@return map-get($heading-sizes, $size);
 	} @else {
-		@warn "No such heading size- - '#{$font}.";
+		@warn "No such heading size - '#{$font}.";
 	}
 }
 
@@ -79,7 +94,15 @@
 	 @if map-has-key($lh, $size) {
 	 	@return map-get($lh, $size);
 	 } @else {
-		 @warn "No such lineheight size- '#{$size}.";
+		 @warn "No such lineheight size - '#{$size}.";
+	 }
+}
+
+@function transition($speed) {
+	 @if map-has-key($transitions, $speed) {
+	 	@return map-get($transitions, $speed);
+	 } @else {
+		 @warn "No such transition speed - '#{$speed}.";
 	 }
 }
 
@@ -89,6 +112,14 @@
 	 @if map-has-key($radius, $size) {
 	 	@return map-get($radius, $size);
 	 } @else {
-		 @warn "No such radius of size- '#{$size}.";
+		 @warn "No such radius of size - '#{$size}.";
+	 }
+}
+
+@function border($style, $color: gray) {
+	 @if map-has-key($borders, $style) {
+	 	@return #{map-get($borders, $style) color($color)};
+	 } @else {
+		 @warn "No such radius of size - '#{$style}.";
 	 }
 }

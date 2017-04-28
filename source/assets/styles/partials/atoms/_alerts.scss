@@ -1,12 +1,12 @@
 /************************************
 	
-	LINKS
+	ALERTS
 
 ************************************/
 
 
 /************************************
-	DEFAULT LINK CONFIG
+	DEFAULT ALERT CONFIG
 	
 	Use this to create your base text atom(s).
 	You may overwrite/extend and, all, or none of the CSS properties using the $text map.
@@ -15,41 +15,40 @@
 
 // Default text styles
 // @extend %text
-$link: (
+$alert: (
 	font-family: font-family(secondary),
 	font-size: font-size(base),
-	color: inherit,
+	color: color(gray, extra-dark),
 );
-@include link($link);
+@include alert($alert);
 
 /************************************
-	EO DEFAULT TEXT CONFIG
+	EO DEFAULT ALERTS CONFIG
 ************************************/
 
 
 /************************************
 	
-	TEXT MODIFIERS
+	ALERTS MODIFIERS
 	
-	To create a new modifier, create a new text map.
-	The text map must contain a 'name' key.
+	To create a new modifier, create a new alert map.
+	The alert map must contain a 'name' key.
 		> 'name' is used to create the placeholder class.
 	
 	Responsive Type:
 	If you want to utilize structured, responsive type, use the 'size' key.
 	
-	To instnciate, @include the text() mixin with the fourth argument as your new button map.
+	To instntiate, @include the alert() mixin with the second argument as your new alert map.
 	
 	Example:
 	
-	$NEW-text: (
-		name: 'NEW-text',
-		size: SIZE, 
+	$NEW-alert: (
+		name: 'NEW-alert', 
 		css-property: value, 
 	);
-	@include button($heading, $NEW-heading);
+	@include alert($heading, $NEW-alert);
 	
 ************************************/
 
-// Text variations
+// Alert variations
 // @extend %<name>

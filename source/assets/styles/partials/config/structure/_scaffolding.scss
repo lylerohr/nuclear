@@ -1,6 +1,10 @@
-@import "../../../../../bower_components/neat/core/neat";
+
 @import "scaffolding-config";
 
 html {
 	font-size: $scale !important;
+}
+
+body {
+  margin: 0;
 }

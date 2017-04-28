@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+
+/*! Nuclear v0.1 | GPL 3.0 License | github.com/lylerohr/nuclear */
+
 /************************************
 	
 	NuclearSass
@@ -10,10 +13,19 @@
 		> Allows user to include/exclude scss files using a map
 	2. Create a comment design pattern
 		> Fully comment code to act as initial documentation
+	3. Optimize constructor default output
+		> Optimize default placeholder classes
+		
 
 ************************************/
 
-@import "partials/libraries/libraries"; //must be first @import
+// optional vendor libraries
+@import "../../bower_components/normalize-css/normalize.css";
+@import "../../bower_components/neat/core/neat";
+
+
+// Nuclear Sass 
+@import "partials/libraries/libraries"; //must be first nuclear @import
 
 @import "partials/config/structure/scaffolding";
 @import "partials/config/theme/theme";
@@ -32,7 +44,7 @@ h1 {
 	@extend %massive-heading-with-subhead;
 }
 
-h3 {
+small {
 	@extend %subhead;
 }
 
@@ -61,14 +73,18 @@ p {
 	@extend %blockquote;
 }
 
-.neat-container {
+.form-container {
 	@include grid-container;
 }
 
-.text {
-	@include grid-column(8);
+.box {
+	@include grid-column(3);
 }
 
 .quote {
 	@include grid-column(4);
+}
+
+.thing {
+	@extend %radio-input;
 }

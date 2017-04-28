@@ -63,7 +63,8 @@ $colors: (
     cta: #cd453d,
     gray: #777777,
     black: #000000,
-    white: #ffffff
+    white: #ffffff,
+    transparent: srgb(255,255,255,0),
 );
 
 // Tone presets for colors
@@ -76,11 +77,20 @@ $tones: (
 );
 
 
+
 /************************************
 	
 	CHROME
 
 ************************************/
+
+$borders: (
+	none: none,
+	hairline: 1px solid,
+	thin: .1rem solid,
+	base: .15rem solid,
+	thick: .2rem solid,
+);
 
 $radius: (
 	none: 0,
@@ -89,6 +99,15 @@ $radius: (
 	large: .5rem	
 );
 
+$transitions : (
+	base: 250ms,
+	extra-fast: 50ms,
+	fast: 100ms,
+	slow: 300ms,
+	extra-slow: 400ms,
+);
+
 $drop-shadows: (
-	none: none,	
+	none: none,
+	base: 2px 2px 2px 1px color(gray, light) initial,	
 );

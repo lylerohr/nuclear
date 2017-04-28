@@ -13,3 +13,48 @@
         + "Please make sure it is defined in `$breakpoints` map.";
   }
 }
+
+@mixin type-sizes-responsive($size) {
+	font-size: rem(map-get-deep($type-sizes, $size, extra-small, font-size));
+	line-height: rem(map-get-deep($type-sizes, $size, extra-small, line-height) * map-get-deep($type-sizes, $size, extra-small, font-size));
+	
+	
+	@media screen and (min-width: breakpoint(small)) {
+		font-size: rem(map-get-deep($type-sizes, $size, small, font-size));
+		line-height: rem(map-get-deep($type-sizes, $size, small, line-height) * map-get-deep($type-sizes, $size, small, font-size));
+	}
+	
+	@media screen and (min-width: breakpoint(medium)) {
+		font-size: rem(map-get-deep($type-sizes, $size, medium, font-size));
+		line-height: rem(map-get-deep($type-sizes,$size, medium, line-height) * map-get-deep($type-sizes, $size, medium, font-size));
+	}
+	
+	@media screen and (min-width: breakpoint(large)) {
+		font-size: rem(map-get-deep($type-sizes, $size, large, font-size));
+		line-height: rem(map-get-deep($type-sizes, $size, large, line-height) * map-get-deep($type-sizes, $size, large, font-size));
+	}
+}
+
+@mixin heading-sizes-responsive($size) {
+	font-size: rem(map-get-deep($heading-sizes, $size, extra-small, font-size));
+	line-height: rem(map-get-deep($heading-sizes, $size, extra-small, line-height) * map-get-deep($heading-sizes, $size, extra-small, font-size));
+	
+	
+	@media screen and (min-width: breakpoint(small)) {
+		font-size: rem(map-get-deep($heading-sizes, $size, small, font-size));
+		line-height: rem(map-get-deep($heading-sizes, $size, small, line-height) * map-get-deep($heading-sizes, $size, small, font-size));
+	}
+	
+	@media screen and (min-width: breakpoint(medium)) {
+		font-size: rem(map-get-deep($heading-sizes, $size, medium, font-size));
+		line-height: rem(map-get-deep($heading-sizes, $size, medium, line-height) * map-get-deep($heading-sizes, $size, medium, font-size));
+	}
+	
+	@media screen and (min-width: breakpoint(large)) {
+		font-size: rem(map-get-deep($heading-sizes, $size, large, font-size));
+		line-height: rem(map-get-deep($heading-sizes, $size, large, line-height) * map-get-deep($heading-sizes, $size, large, font-size));
+	}
+}
+
+
+
