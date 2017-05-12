@@ -310,3 +310,75 @@
 		@include type-sizes-responsive(map-get($modifier, size));
 	}
 }
+
+// label constructor
+@mixin alert($default: (), $modifier: ()) {
+	// default config styles
+	$default: extend((
+		display: block,
+		margin: 1rem 0 1.5rem,
+		padding: 0,
+		font-family: inherit,
+		font-weight: inherit,
+		color: color(black),
+		text-align: left,
+		vertical-align: inherit,
+		touch-action: auto,
+		cursor: inherit,
+		background-image: none,
+		background-color: transparent,
+		border: none,
+		white-space: normal,
+		type: base,  /* can use for preset theming within constructor */
+		size: base,
+		name: 'label' /* used to create placeholder class name */
+	), $default);
+	
+	$modifier: extend($default, $modifier);
+	
+	// create placeholder class merging $default map styles and $modifier map styles
+	%#{map-get($modifier, name)} {
+		@each $name, $value in $modifier {
+			@if $name != type and $name != name {
+				#{$name}: #{$value};
+			}
+		}
+		@include type-sizes-responsive(map-get($modifier, size));
+	}
+}
+
+// badge constructor
+@mixin badge($default: (), $modifier: ()) {
+	// default config styles
+	$default: extend((
+		display: block,
+		margin: 1rem 0 1.5rem,
+		padding: 0,
+		font-family: inherit,
+		font-weight: inherit,
+		color: color(black),
+		text-align: left,
+		vertical-align: inherit,
+		touch-action: auto,
+		cursor: inherit,
+		background-image: none,
+		background-color: transparent,
+		border: none,
+		white-space: normal,
+		type: base,  /* can use for preset theming within constructor */
+		size: base,
+		name: 'label' /* used to create placeholder class name */
+	), $default);
+	
+	$modifier: extend($default, $modifier);
+	
+	// create placeholder class merging $default map styles and $modifier map styles
+	%#{map-get($modifier, name)} {
+		@each $name, $value in $modifier {
+			@if $name != type and $name != name {
+				#{$name}: #{$value};
+			}
+		}
+		@include type-sizes-responsive(map-get($modifier, size));
+	}
+}
