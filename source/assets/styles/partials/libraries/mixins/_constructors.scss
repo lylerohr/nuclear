@@ -1,12 +1,14 @@
 /************************************
-	
+
 	CONSTRUCTORS
+
+	TODO: explore using a map of maps for constructor inputs
 
 ************************************/
 
 
 // button constructor
-@mixin button($default: (), $hover: (), $active: (), $modifier: ()) {
+@mixin button($default: (), $hover: (), $active: (), $modifier: (), $before: (), $after: ()) {
 	// default config styles
 	$default: extend((
 		display: inline-block,
@@ -24,32 +26,25 @@
 		background-color: transparent,
 		border: border(hairline, transparent),
 		white-space: nowrap,
-		size: base,
-		/*type: base,  /* can use for preset theming within constructor */
-		name: 'button' /* used to create placeholder class name */
+		size: base, /* used to set default responsive-type() */
+		name: 'button', /* used to create placeholder class name */
+		responsive-type: true,
 	), $default);
-	
+
 	$modifier: extend($default, $modifier);
-	
+
 	// create placeholder class merging $default map styles and $modifier map styles
 	%#{map-get($modifier, name)} {
 		@each $name, $value in $modifier {
-			@if $name != type and $name != name {
+			@if $name != type and $name != name and $name !=responsive-type {
 				#{$name}: #{$value};
 			}
 		}
-		&:hover {
-			@each $name, $value in $hover {
-				#{$name}: #{$value};
-			}
+		@include state-selectors($hover, $active);
+		@include pseudo-classes($before, $after);
+		@if map-get($modifier, responsive-type) == true {
+			@include type-sizes-responsive(map-get($modifier, size));
 		}
-		&:active,
-		&:focus {
-			@each $name, $value in $active {
-				#{$name}: #{$value};
-			}
-		}
-		@include heading-sizes-responsive(map-get($modifier, size));
 	}
 }
 
@@ -73,19 +68,22 @@
 		border: border(none),
 		white-space: normal,
 		size: base,  /* can use for preset theming within constructor */
-		name: 'heading' /* used to create placeholder class name */
+		name: 'heading', /* used to create placeholder class name */
+		responsive-type: true,
 	), $default);
-	
+
 	$modifier: extend($default, $modifier);
-	
+
 	// create placeholder class merging $default map styles and $modifier map styles
 	%#{map-get($modifier, name)} {
 		@each $name, $value in $modifier {
-			@if $name != size and $name != name {
+			@if $name != size and $name != name and $name !=responsive-type {
 				#{$name}: #{$value};
 			}
 		}
-		@include heading-sizes-responsive(map-get($modifier, size));
+		@if map-get($modifier, responsive-type) == true {
+			@include type-sizes-responsive(map-get($modifier, size));
+		}
 	}
 }
 
@@ -108,23 +106,26 @@
 		border: border(none),
 		white-space: normal,
 		size: base,  /* can use for preset theming within constructor */
-		name: 'text' /* used to create placeholder class name */
+		name: 'text', /* used to create placeholder class name */
+		responsive-type: true,
 	), $default);
-	
+
 	$modifier: extend($default, $modifier);
 	// create placeholder class merging $default map styles and $modifier map styles
 	%#{map-get($modifier, name)} {
 		@each $name, $value in $modifier {
-			@if $name != size and $name != name {
+			@if $name != size and $name != name and $name !=responsive-type {
 				#{$name}: #{$value};
 			}
 		}
-		@include type-sizes-responsive(map-get($modifier, size));
+		@if map-get($modifier, responsive-type) == true {
+			@include type-sizes-responsive(map-get($modifier, size));
+		}
 	}
 }
 
 // link constructor
-@mixin link($default: (), $modifier: ()) {
+@mixin link($default: (), $hover: (), $active: (), $modifier: (), $before: (), $after: ()) {
 	// default config styles
 	$default: extend((
 		display: inline,
@@ -143,19 +144,25 @@
 		transition: transition(base),
 		white-space: normal,
 		size: base,  /* can use for preset theming within constructor */
-		name: 'text' /* used to create placeholder class name */
+		name: 'link', /* used to create placeholder class name */
+		responsive-type: true,
 	), $default);
-	
+
 	$modifier: extend($default, $modifier);
-	
+
 	// create placeholder class merging $default map styles and $modifier map styles
 	%#{map-get($modifier, name)} {
 		@each $name, $value in $modifier {
-			@if $name != size and $name != name {
+			@if $name != size and $name != name and $name !=responsive-type {
 				#{$name}: #{$value};
 			}
 		}
-		@if map-get($modifier, size) != base {
+
+		@include state-selectors($hover, $active);
+
+		@include pseudo-classes($before, $after);
+
+		@if map-get($modifier, responsive-type) == true {
 			@include type-sizes-responsive(map-get($modifier, size));
 		}
 	}
@@ -184,54 +191,55 @@
 		border-radius: radius(base),
 		box-shadow: none,
 		box-sizing: border-box,
-		transition: transition(base),		
+		transition: transition(base),
 		form-element: input, /* can use for preset theming within constructor */
 		element-type: text,  /* can use for preset theming within constructor */
 		size: base,
-		name: 'input' /* used to create placeholder class name */
+		name: 'input', /* used to create placeholder class name */
+		responsive-type: true,
 	), $default);
-	
+
 	$modifier: extend($default, $modifier);
-	
+
 	// create placeholder class merging $default map styles and $modifier map styles
 	%#{map-get($modifier, name)[type="map-get($modifier, element-type)"]} {
 		@each $name, $value in $modifier {
-			@if $name != size and $name != name and $name != form-element and $name != element-type {
+			@if $name != size and $name != name and $name != form-element and $name != element-type and $name !=responsive-type {
 				#{$name}: #{$value};
 			}
 		}
 		@include type-sizes-responsive(map-get($modifier, size));
 
-		
+
 		@if map-get($modifier, form-element) == input {
 			@if map-get($modifier, element-type) == text {
-				
+
 			} @else if map-get($modifier, element-type) == password {
-				
+
 			} @else if map-get($modifier, element-type) == datetime {
-				
+
 			} @else if map-get($modifier, element-type) == datetime-local {
-				
+
 			} @else if map-get($modifier, element-type) == date {
-				
+
 			} @else if map-get($modifier, element-type) == month {
-				
+
 			} @else if map-get($modifier, element-type) == time {
-				
+
 			} @else if map-get($modifier, element-type) == week {
-				
+
 			} @else if map-get($modifier, element-type) == number {
-				
+
 			} @else if map-get($modifier, element-type) == email {
-				
+
 			} @else if map-get($modifier, element-type) == url {
-				
+
 			} @else if map-get($modifier, element-type) == search {
-				
+
 			} @else if map-get($modifier, element-type) == tel {
-				
+
 			} @else if map-get($modifier, element-type) == color {
-				
+
 			} @else if map-get($modifier, element-type) == radio {
 				display: inline;
 				width: initial;
@@ -241,19 +249,19 @@
 		} @else if map-get($modifier, form-element) == textarea {
 			height: auto;
 		} @else if map-get($modifier, form-element) == button {
-			
+
 		}  @else if map-get($modifier, form-element) == select {
-			
+
 		} @else if map-get($modifier, form-element) == label {
-			
+
 		} @else if map-get($modifier, form-element) == output {
-			
+
 		} @else if map-get($modifier, form-element) == datalist {
-			
+
 		} @else {
 			@warn "Input Constructor Error: No such input form-element- - '#{map-get($modifier, form-element)}.";
 		}
-	
+
 		&::-ms-expand {
 			border: 0;
 			background-color: transparent;
@@ -295,19 +303,22 @@
 		white-space: normal,
 		type: base,  /* can use for preset theming within constructor */
 		size: base,
-		name: 'label' /* used to create placeholder class name */
+		name: 'label', /* used to create placeholder class name */
+		responsive-type: true,
 	), $default);
-	
+
 	$modifier: extend($default, $modifier);
-	
+
 	// create placeholder class merging $default map styles and $modifier map styles
 	%#{map-get($modifier, name)} {
 		@each $name, $value in $modifier {
-			@if $name != type and $name != name {
+			@if $name != type and $name != name and $name !=responsive-type {
 				#{$name}: #{$value};
 			}
 		}
-		@include type-sizes-responsive(map-get($modifier, size));
+		@if map-get($modifier, responsive-type) == true {
+			@include type-sizes-responsive(map-get($modifier, size));
+		}
 	}
 }
 
@@ -331,19 +342,22 @@
 		white-space: normal,
 		type: base,  /* can use for preset theming within constructor */
 		size: base,
-		name: 'label' /* used to create placeholder class name */
+		name: 'label', /* used to create placeholder class name */
+		responsive-type: true,
 	), $default);
-	
+
 	$modifier: extend($default, $modifier);
-	
+
 	// create placeholder class merging $default map styles and $modifier map styles
 	%#{map-get($modifier, name)} {
 		@each $name, $value in $modifier {
-			@if $name != type and $name != name {
+			@if $name != type and $name != name and $name !=responsive-type {
 				#{$name}: #{$value};
 			}
 		}
-		@include type-sizes-responsive(map-get($modifier, size));
+		@if map-get($modifier, responsive-type) == true {
+			@include type-sizes-responsive(map-get($modifier, size));
+		}
 	}
 }
 
@@ -367,18 +381,21 @@
 		white-space: normal,
 		type: base,  /* can use for preset theming within constructor */
 		size: base,
-		name: 'label' /* used to create placeholder class name */
+		name: 'label', /* used to create placeholder class name */
+		responsive-type: true,
 	), $default);
-	
+
 	$modifier: extend($default, $modifier);
-	
+
 	// create placeholder class merging $default map styles and $modifier map styles
 	%#{map-get($modifier, name)} {
 		@each $name, $value in $modifier {
-			@if $name != type and $name != name {
+			@if $name != type and $name != name and $name !=responsive-type {
 				#{$name}: #{$value};
 			}
 		}
-		@include type-sizes-responsive(map-get($modifier, size));
+		@if map-get($modifier, responsive-type) == true {
+			@include type-sizes-responsive(map-get($modifier, size));
+		}
 	}
 }

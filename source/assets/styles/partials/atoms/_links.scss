@@ -1,5 +1,5 @@
 /************************************
-	
+
 	LINKS
 
 ************************************/
@@ -7,20 +7,31 @@
 
 /************************************
 	DEFAULT LINK CONFIG
-	
+
 	Use this to create your base text atom(s).
 	You may overwrite/extend and, all, or none of the CSS properties using the $text map.
-	
+
 ************************************/
 
 // Default text styles
 // @extend %text
 $link: (
-	font-family: font-family(secondary),
-	font-size: font-size(base),
-	color: inherit,
+	font-family: font-family(primary),
+	color: color(brand-primary, dark),
+	cursor: pointer,
 );
-@include link($link);
+
+$link-hover: (
+	color: color(brand-primary, extra-dark),
+);
+
+$link-active: (
+	color: color(brand-primary, dark),
+);
+
+// Initialize the %link placeholder class - http://thesassway.com/intermediate/understanding-placeholder-selectors
+@include link($link, $link-hover, $link-active);
+
 
 /************************************
 	EO DEFAULT TEXT CONFIG
@@ -28,27 +39,27 @@ $link: (
 
 
 /************************************
-	
+
 	TEXT MODIFIERS
-	
+
 	To create a new modifier, create a new text map.
 	The text map must contain a 'name' key.
 		> 'name' is used to create the placeholder class.
-	
+
 	Responsive Type:
 	If you want to utilize structured, responsive type, use the 'size' key.
-	
+
 	To instnciate, @include the text() mixin with the fourth argument as your new button map.
-	
+
 	Example:
-	
+
 	$NEW-text: (
 		name: 'NEW-text',
-		size: SIZE, 
-		css-property: value, 
+		size: SIZE,
+		css-property: value,
 	);
 	@include button($heading, $NEW-heading);
-	
+
 ************************************/
 
 // Text variations

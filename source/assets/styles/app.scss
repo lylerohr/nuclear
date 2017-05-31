@@ -1,30 +1,40 @@
 @charset "UTF-8";
 
-
-/*! Nuclear v0.1 | GPL 3.0 License | github.com/lylerohr/nuclear */
+/*! Cordial v0.1.3 | GPL 3.0 License | https://github.com/lylerohr/nuclear */
 
 /************************************
-	
-	NuclearSass
+
+	Cordial
 	Main Scss file
-	
-	TODO: 
+
+	Cordial is a Sass and Atomic based framework that models the canonical
+	CSS Zen Garden minimalism and separation of scope.  The aim is to free
+	your markup form framework-specific classes and allow for full structural
+	and theme control via CSS.
+
+	Cordial utilizes the Brad Frost's, Atomic Design Methodology
+	(http://atomicdesign.bradfrost.com/) to organize absolutely everything.
+
+
+	TODO:
 	1. Create a nuclear-config.scss
 		> Allows user to include/exclude scss files using a map
 	2. Create a comment design pattern
 		> Fully comment code to act as initial documentation
 	3. Optimize constructor default output
 		> Optimize default placeholder classes
-		
+
 
 ************************************/
 
-// optional vendor libraries
+// Vendor libraries
 @import "../../bower_components/normalize-css/normalize.css";
-@import "../../bower_components/neat/core/neat";
+@import "../../bower_components/sassy-maps/sass/sassy-maps";
 
+// Optional grid
+//@import "../../bower_components/neat/core/neat";
 
-// Nuclear Sass 
+// Nuclear Sass
 @import "partials/libraries/libraries"; //must be first nuclear @import
 
 @import "partials/config/structure/scaffolding";
@@ -49,7 +59,7 @@ small {
 }
 
 .buttons .box {
-	@include grid-column(4);
+
 	text-align: center;
 }
 
@@ -69,20 +79,28 @@ p {
 	@extend %text;
 }
 
+a {
+	@extend %link;
+}
+
 .blockquote {
 	@extend %blockquote;
 }
 
-.form-container {
-	@include grid-container;
+.neat-container {
+
 }
 
 .box {
-	@include grid-column(3);
+
 }
 
 .quote {
-	@include grid-column(4);
+
+}
+
+.media-list {
+
 }
 
 .thing {

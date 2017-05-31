@@ -1,5 +1,5 @@
 /************************************
-	
+
 	BUTTONS
 
 ************************************/
@@ -7,10 +7,10 @@
 
 /************************************
 	DEFAULT BUTTON CONFIG
-	
+
 	Use this to create your base button atom.
 	You may overwrite/extend and, all, or none of the CSS properties using the $button map.
-	
+
 ************************************/
 
 // Default button styles
@@ -46,22 +46,22 @@ $button-active: (
 
 
 /************************************
-	
+
 	BUTTON MODIFIERS
-	
+
 	To create a new modifier, create a new button map.
 	The button map must contain a "name" key.
-	
+
 	To instnciate, @include the button() mixin with the fourth argument as your new button map.
-	
+
 	Example:
-	
+
 	$NEW-button: (
 		name: 'NEW-button',
-		css-property: value, 
+		css-property: value,
 	);
 	@include button($button, $button-hover, $button-active, $NEW-button);
-	
+
 ************************************/
 
 // Button variations
@@ -70,7 +70,7 @@ $large-button: (
 	name: 'large-button',
 	padding: #{2rem 4rem},
 	margin: #{.5rem 0},
-	font-size: 2rem
+	font-size: 2rem,
 );
 @include button($button, $button-hover, $button-active, $large-button);
 
@@ -78,12 +78,6 @@ $large-button: (
 $small-button: (
 	name: 'small-button',
 	padding: #{.5rem 1rem},
-	font-size: .875rem
+	font-size: .875rem,
 );
 @include button($button, $button-hover, $button-active, $small-button);
-
-
-
-
-
-

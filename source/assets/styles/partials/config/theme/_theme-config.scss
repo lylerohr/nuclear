@@ -1,15 +1,15 @@
 /*******
-	
+
 	NuclearSass Framework
 	Theme Configuration
-	
+
 	v0.1 alpha
-	
+
 *******/
-	
-	
+
+
 /************************************
-	
+
 	TYPOGRAPHY
 
 ************************************/
@@ -24,9 +24,9 @@ $font-stack: (
 // sets relative base font sizes
 // unitless
 $font-sizes: (
-	massive: 6,
-	giant: 4,
-	extra-big: 2,
+	monolithic: 6,
+	massive: 4,
+	giant: 2,
 	big: 1.5,
 	base: 1,
 	small: .875,
@@ -36,7 +36,6 @@ $font-sizes: (
 
 // line-height, unitless
 // mapped to breakpoints
-// based on so
 $lh: (
   display: 1.1,
   extra-small: 1.1,
@@ -47,7 +46,7 @@ $lh: (
 );
 
 /************************************
-	
+
 	COLORS
 
 ************************************/
@@ -72,15 +71,15 @@ $colors: (
 $tones: (
 	extra-light: 20%,
 	light: 10%,
-	dark: 10%,
+	dark: 5%,
 	extra-dark: 20%
 );
 
 
 
 /************************************
-	
-	CHROME
+
+	DIMENSION
 
 ************************************/
 
@@ -96,10 +95,11 @@ $radius: (
 	none: 0,
 	small: .15rem,
 	base: .25rem,
-	large: .5rem	
+	large: .5rem
 );
 
-$transitions : (
+$transitions: (
+	none: 0ms,
 	base: 250ms,
 	extra-fast: 50ms,
 	fast: 100ms,
@@ -109,5 +109,9 @@ $transitions : (
 
 $drop-shadows: (
 	none: none,
-	base: 2px 2px 2px 1px color(gray, light) initial,	
+	base: 2px 2px 2px 1px color(gray, light) initial,
+	level-one: 4px 4px 4px 1px color(gray, light) initial,
+	level-two: 6px 6px 6px 1px color(gray, light) initial,
+	level-three: 8px 8px 8px 1px color(gray, light) initial,
+	level-four: 10px 10px 10px 1px color(gray, light) initial,
 );

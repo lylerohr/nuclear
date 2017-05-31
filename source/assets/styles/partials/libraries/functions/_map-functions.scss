@@ -1,5 +1,5 @@
 /*************************
-	
+
 	MAP FUNCTIONS - STRUCTURE LAYER
 
 *************************/
@@ -39,7 +39,7 @@
 }
 
 /*************************
-	
+
 	MAP FUNCTIONS - THEME LAYER
 
 *************************/
@@ -122,4 +122,12 @@
 	 } @else {
 		 @warn "No such radius of size - '#{$style}.";
 	 }
+}
+
+@function shadow($height) {
+	@if map-has-key($drop-shadows, $height) {
+	   @return #{map-get($drop-shadows, $height)};
+	} @else {
+		@warn "No such height of name - '#{$height}.";
+	}
 }

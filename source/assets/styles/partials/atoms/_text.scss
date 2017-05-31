@@ -1,5 +1,5 @@
 /************************************
-	
+
 	TEXT
 
 ************************************/
@@ -7,17 +7,16 @@
 
 /************************************
 	DEFAULT HEADING CONFIG
-	
+
 	Use this to create your base text atom(s).
 	You may overwrite/extend and, all, or none of the CSS properties using the $text map.
-	
+
 ************************************/
 
 // Default text styles
 // @extend %text
 $text: (
 	font-family: font-family(secondary),
-	font-size: font-size(base),
 	color: color(gray, extra-dark),
 );
 @include text($text);
@@ -28,27 +27,27 @@ $text: (
 
 
 /************************************
-	
+
 	TEXT MODIFIERS
-	
+
 	To create a new modifier, create a new text map.
 	The text map must contain a 'name' key.
 		> 'name' is used to create the placeholder class.
-	
+
 	Responsive Type:
 	If you want to utilize structured, responsive type, use the 'size' key.
-	
+
 	To instnciate, @include the text() mixin with the fourth argument as your new button map.
-	
+
 	Example:
-	
+
 	$NEW-text: (
 		name: 'NEW-text',
-		size: SIZE, 
-		css-property: value, 
+		size: SIZE,
+		css-property: value,
 	);
 	@include button($heading, $NEW-heading);
-	
+
 ************************************/
 
 // Text variations

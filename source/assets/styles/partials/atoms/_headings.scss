@@ -1,5 +1,5 @@
 /************************************
-	
+
 	HEADINGS
 
 ************************************/
@@ -7,17 +7,17 @@
 
 /************************************
 	DEFAULT HEADING CONFIG
-	
+
 	Use this to create your base heading atom(s).
 	You may overwrite/extend and, all, or none of the CSS properties using the $heading map.
-	
+
 ************************************/
 
 // Default heading styles
 // @extend %heading
 $heading: (
 	font-family: font-family(primary),
-	size: extra-big,
+	size: giant,
 	color: color(brand-primary),
 	background-color: transparent,
 );
@@ -29,27 +29,27 @@ $heading: (
 
 
 /************************************
-	
+
 	HEADING MODIFIERS
-	
+
 	To create a new modifier, create a new heading map.
 	The heading map must contain a 'name' key.
 		> 'name' is used to create the placeholder class.
-	
+
 	Responsive Type:
 	If you want to utilize structured, responsive type, use the 'size' key.
-	
+
 	To instnciate, @include the heading() mixin with the fourth argument as your new heading map.
-	
+
 	Example:
-	
+
 	$NEW-heading: (
 		name: 'NEW-heading',
-		size: 'size', 
-		css-property: value, 
+		size: 'size',
+		css-property: value,
 	);
 	@include heading($heading, $NEW-heading);
-	
+
 ************************************/
 
 // Heading modifiers

@@ -1,14 +1,36 @@
-/* 
-	
-	$type-sizes 
-		> type-size name 
+/*
+
+	$type-sizes
+		> type-size name
 			> screen-size name
-			
+
 	primarily utilized to create type size classes found in _type-sizes.scss
-	
+
 */
-	
+
 $type-sizes: (
+  monolithic: (
+    extra-small: (
+      font-size: font-size(monolithic)*.75,
+      line-height: lh(extra-small)
+    ),
+    small: (
+      font-size: font-size(monolithic)*0.875,
+      line-height: lh(small)
+    ),
+    medium: (
+      font-size: font-size(monolithic),
+      line-height: lh(base)
+    ),
+    large: (
+      font-size: font-size(monolithic)*1.1,
+      line-height: lh(large)
+    ),
+    extra-large: (
+      font-size: font-size(monolithic)*1.1,
+      line-height: lh(extra-large)
+    )
+  ),
   massive: (
     extra-small: (
       font-size: font-size(massive)*.75,
@@ -37,7 +59,7 @@ $type-sizes: (
       line-height: lh(extra-small)
     ),
     small: (
-      font-size: font-size(giant)*0.875,
+      font-size: font-size(giant)*.875,
       line-height: lh(small)
     ),
     medium: (
@@ -49,29 +71,7 @@ $type-sizes: (
       line-height: lh(large)
     ),
     extra-large: (
-      font-size: font-size(giant)*1.1,
-      line-height: lh(extra-large)
-    )
-  ),
-  extra-big: (
-    extra-small: (
-      font-size: font-size(extra-big)*.75,
-      line-height: lh(extra-small)
-    ),
-    small: (
-      font-size: font-size(extra-big)*.875,
-      line-height: lh(small)
-    ),
-    medium: (
-      font-size: font-size(extra-big),
-      line-height: lh(base)
-    ),
-    large: (
-      font-size: font-size(extra-big)*1.1,
-      line-height: lh(large)
-    ),
-    extra-large: (
-      font-size: font-size(extra-big)*1.3,
+      font-size: font-size(giant)*1.3,
       line-height: lh(extra-large)
     )
   ),
@@ -166,7 +166,7 @@ $type-sizes: (
 );
 
 $heading-sizes: (
-  massive: (
+  monolithic: (
     extra-small: (
       font-size: font-size(massive)*.75,
       line-height: lh(display),
@@ -188,13 +188,35 @@ $heading-sizes: (
       line-height: lh(display),
     )
   ),
-  giant: (
+  massive: (
     extra-small: (
-      font-size: font-size(giant)*.75,
+      font-size: font-size(monolithic)*.75,
       line-height: lh(display),
     ),
     small: (
-      font-size: font-size(giant)*0.875,
+      font-size: font-size(monolithic)*0.875,
+      line-height: lh(display),
+    ),
+    medium: (
+      font-size: font-size(monolithic),
+      line-height: lh(display),
+    ),
+    large: (
+      font-size: font-size(monolithic)*1.1,
+      line-height: lh(display),
+    ),
+    extra-large: (
+      font-size: font-size(monolithic)*1.1,
+      line-height: lh(display),
+    )
+  ),
+  giant: (
+    extra-small: (
+      font-size: font-size(giant),
+      line-height: lh(display),
+    ),
+    small: (
+      font-size: font-size(giant),
       line-height: lh(display),
     ),
     medium: (
@@ -202,33 +224,11 @@ $heading-sizes: (
       line-height: lh(display),
     ),
     large: (
-      font-size: font-size(giant)*1.1,
+      font-size: font-size(giant),
       line-height: lh(display),
     ),
     extra-large: (
-      font-size: font-size(giant)*1.1,
-      line-height: lh(display),
-    )
-  ),
-  extra-big: (
-    extra-small: (
-      font-size: font-size(extra-big),
-      line-height: lh(display),
-    ),
-    small: (
-      font-size: font-size(extra-big),
-      line-height: lh(display),
-    ),
-    medium: (
-      font-size: font-size(extra-big),
-      line-height: lh(display),
-    ),
-    large: (
-      font-size: font-size(extra-big),
-      line-height: lh(display),
-    ),
-    extra-large: (
-      font-size: font-size(extra-big),
+      font-size: font-size(giant),
       line-height: lh(display),
     )
   ),
