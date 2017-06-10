@@ -44,6 +44,7 @@
 
 *************************/
 
+
 // theme/olors
 @function color($color, $tone: null, $function: null) {
     @if $tone == "extra-light" {
@@ -124,10 +125,18 @@
 	 }
 }
 
-@function shadow($height) {
+@function shadow($height, $color...) {
 	@if map-has-key($drop-shadows, $height) {
-	   @return #{map-get($drop-shadows, $height)};
+	   @return #{map-get($drop-shadows, $height)} $color;
 	} @else {
-		@warn "No such height of name - '#{$height}.";
+		@warn "No such drop shadow height of name - '#{$height}.";
+	}
+}
+
+@function text-shadow($height, $color) {
+	@if map-has-key($text-shadows, $height) {
+	   @return #{map-get($text-shadows, $height)} $color;
+	} @else {
+		@warn "No such text shadow height of name - '#{$height}.";
 	}
 }

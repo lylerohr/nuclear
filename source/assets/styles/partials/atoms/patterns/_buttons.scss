@@ -1,0 +1,95 @@
+/************************************
+
+	BUTTONS
+
+************************************/
+
+
+/************************************
+	DEFAULT BUTTON CONFIG
+
+	Use this to create your base button atom.
+	You may overwrite/extend and, all, or none of the CSS properties using the $button map.
+
+************************************/
+
+// Default button styles
+// @extend %button
+$button: (
+	font-family: font-family(text),
+	font-size: 1rem,
+	color: color(brand-primary),
+	background-color: transparent,
+	border: #{2px solid color(brand-primary)},
+	"border-radius": .3rem,
+	":hover": (
+		background-color: color(brand-primary),
+		color: invert(color(brand-primary)),
+	),
+	":active": (
+		background-color: color(brand-primary, dark),
+		color: invert(color(brand-primary, dark)),
+		outline: none
+	),
+);
+
+// Initialize the %button placeholder class - http://thesassway.com/intermediate/understanding-placeholder-selectors
+@include button($button);
+
+/************************************
+	EO DEFAULT BUTTON CONFIG
+************************************/
+
+
+/************************************
+
+	BUTTON MODIFIERS
+
+	To create a new modifier, create a new button map.
+	The button map must contain a "name" key.
+
+	To instnciate, @include the button() mixin with the fourth argument as your new button map.
+
+	Example:
+
+	$NEW-button: (
+		name: 'NEW-button',
+		css-property: value,
+	);
+	@include button($button, $button-hover, $button-active, $NEW-button);
+
+************************************/
+
+// Button variations
+// @extend %<name>
+$button--large: (
+	name: 'button--large',
+	padding: #{2rem 4rem},
+	margin: #{.5rem 0},
+	font-size: 2rem,
+);@include button($button, $button--large);
+
+
+$button--small: (
+	name: 'button--small',
+	padding: #{.5rem 1rem},
+	font-size: .875rem,
+);@include button($button, $button--small);
+
+$button--icon-left: (
+	name: 'button--icon-left',
+	":before": (
+		font-family: font-family(icons),
+		margin-right: margin(extra-small),
+		content: "",
+	),
+);@include button($button, $button--icon-left);
+
+$button--icon-right: (
+	name: 'button--icon-right',
+	":after": (
+		font-family: font-family(icons),
+		margin-left: margin(extra-small),
+		content: "",
+	),
+);@include button($button, $button--icon-right);

@@ -1,9 +1,7 @@
 /*******
 
-	NuclearSass Framework
+	Cordial Framework
 	Theme Configuration
-
-	v0.1 alpha
 
 *******/
 
@@ -14,15 +12,26 @@
 
 ************************************/
 
+$font-imports: (
+	'Roboto': url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500'),
+	'Noto Serif': url('https://fonts.googleapis.com/css?family=Noto+Serif'),
+);
+
 // sets font stacks
+// font-family($font);
 $font-stack: (
-	primary: #{'Helvetica Neue', Helvetica, Arial, sans-serif},
-	secondary: #{Georgia, 'Times New Roman', sans-serif},
-	code: #{'source code pro', monospace}
+	text: #{'Roboto', Helvetica, Arial, sans-serif},
+	display: #{'Noto Serif', 'Times New Roman', sans-serif},
+	code: #{'courier', monospace},
+	icons: #{'FontAwesome'},
+	cd--text: #{'Roboto', Helvetica, Arial, sans-serif},
+	cd--display: #{'Noto Serif', 'Times New Roman', sans-serif},
+	cd--code: #{'courier', monospace},
 );
 
 // sets relative base font sizes
-// unitless
+// unitless, DO NOT SET UNITS HERE
+// font-size($size);
 $font-sizes: (
 	monolithic: 6,
 	massive: 4,
@@ -30,12 +39,13 @@ $font-sizes: (
 	big: 1.5,
 	base: 1,
 	small: .875,
-	extra-small: .5
+	extra-small: .75
 );
 
 
 // line-height, unitless
 // mapped to breakpoints
+// lh($size);
 $lh: (
   display: 1.1,
   extra-small: 1.1,
@@ -53,13 +63,14 @@ $lh: (
 
 // Can take any valid color value - hex, rgb(), srgb(), etc.
 // Extendable - you can add/subtract as many colors as you need for your application
-// Utilizes - color(<COLORNAME>, <TONE>optional, <FUNCTION>optional);
+// color($color, <$tone, $function>);
 
 $colors: (
-    brand-primary: #cd453d,
-    brand-secondary: #aeaeae,
-    brand-tertiary: #dad7c2,
-    cta: #cd453d,
+    brand-primary: #2F2933,
+    brand-secondary: #01A2A6,
+    brand-tertiary: #29D9C2,
+	brand-auxiliary: #FFFFA6,
+    cta: #BDF271,
     gray: #777777,
     black: #000000,
     white: #ffffff,
@@ -68,6 +79,8 @@ $colors: (
 
 // Tone presets for colors
 // accepts number, utilizes the Sass lighten() and darken() functions
+// can be utilzed in the color() function
+// color($color, <$tone, $function>);
 $tones: (
 	extra-light: 20%,
 	light: 10%,
@@ -83,6 +96,7 @@ $tones: (
 
 ************************************/
 
+// border($style, <$color>);
 $borders: (
 	none: none,
 	hairline: 1px solid,
@@ -91,13 +105,16 @@ $borders: (
 	thick: .2rem solid,
 );
 
+// radius($size);
 $radius: (
 	none: 0,
 	small: .15rem,
 	base: .25rem,
-	large: .5rem
+	large: .5rem,
+	circle: 50%,
 );
 
+// transition($speed);
 $transitions: (
 	none: 0ms,
 	base: 250ms,
@@ -107,11 +124,24 @@ $transitions: (
 	extra-slow: 400ms,
 );
 
+// shadow($height, <$color>);
 $drop-shadows: (
-	none: none,
-	base: 2px 2px 2px 1px color(gray, light) initial,
-	level-one: 4px 4px 4px 1px color(gray, light) initial,
-	level-two: 6px 6px 6px 1px color(gray, light) initial,
-	level-three: 8px 8px 8px 1px color(gray, light) initial,
-	level-four: 10px 10px 10px 1px color(gray, light) initial,
+	flat: none,
+	base: 0 0 0,
+	raised: 0 1px 2px 0,
+	overlay: 0 4px 8px 0,
+	sticky-nav: 0 6px 12px 0,
+	temporary-nav: 	0 8px 16px 0,
+	pop-out: 0 12px 24px 0,
+);
+
+// text-shadow($height, <$color>);
+$text-shadows: (
+	flat: none,
+	base: 0 0 0,
+	raised: 0 1px 2px,
+	overlay: 0 4px 8px,
+	sticky-nav: 0 6px 12px,
+	temporary-nav: 	0 8px 16px,
+	pop-out: 0 12px 24px,
 );

@@ -2,6 +2,8 @@
 $scale: 16px;
 
 // @media breakpoints
+// You may not need to use these. Great for use in creating breakpoints for Neat Grids
+// Use with breakpoint() function
 $breakpoints: (
   extra-small: 576px,
   small: 768px,
@@ -9,15 +11,17 @@ $breakpoints: (
   large: 1200px
 );
 
-// z-index 
+// z-index
+// z() function
 $z-layers: (
   bottomless-pit: -9999,
-  default: 1,
+  base: 1,
   dropdown: 3000,
   overlay: 4000,
   modal: 4001
 );
 
+//margin() function
 $margin: (
 	base: 1rem,
 	none: 0,
@@ -27,6 +31,7 @@ $margin: (
 	extra-large: 2rem,
 );
 
+// padding() function
 $padding: (
 	base: .5rem,
 	none: 0,

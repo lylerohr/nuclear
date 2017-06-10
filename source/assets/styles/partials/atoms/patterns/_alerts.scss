@@ -1,0 +1,53 @@
+/************************************
+
+	ALERTS
+
+************************************/
+
+
+/************************************
+	DEFAULT ALERT CONFIG
+
+	Use this to create your base text atom(s).
+	You may overwrite/extend and, all, or none of the CSS properties using the $text map.
+
+************************************/
+
+// Default text styles
+// @extend %text
+$alert: (
+	font-family: font-family(text),
+	font-size: font-size(base),
+	color: color(gray, extra-dark),
+);@include alert($alert);
+
+/************************************
+	EO DEFAULT ALERTS CONFIG
+************************************/
+
+
+/************************************
+
+	ALERTS MODIFIERS
+
+	To create a new modifier, create a new alert map.
+	The alert map must contain a 'name' key.
+		> 'name' is used to create the placeholder class.
+
+	Responsive Type:
+	If you want to utilize structured, responsive type, use the 'size' key.
+
+	To instntiate, @include the alert() mixin with the second argument as your new alert map.
+
+	Example:
+
+	$NEW-alert: (
+		name: 'NEW-alert',
+		css-property: value,
+	);
+	@include alert($heading, $NEW-alert);
+
+************************************/
+
+// Alert variations
+// @extend %<name>

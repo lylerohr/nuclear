@@ -27,6 +27,11 @@
 
 ************************************/
 
+// Font Imports
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif|Roboto:300,400,700');
+@import "../../bower_components/font-awesome/css/font-awesome.min.css";
+
+
 // Vendor libraries
 @import "../../bower_components/normalize-css/normalize.css";
 @import "../../bower_components/sassy-maps/sass/sassy-maps";
@@ -46,63 +51,4 @@
 @import "partials/pages/pages";
 @import "partials/templates/templates";
 
-
-
 // TESTING GROUND
-
-h1 {
-	@extend %massive-heading-with-subhead;
-}
-
-small {
-	@extend %subhead;
-}
-
-.buttons .box {
-
-	text-align: center;
-}
-
-.big-button {
-	@extend %large-button;
-}
-
-.mid-button {
-	@extend %button;
-}
-
-.small-button {
-	@extend %small-button;
-}
-
-p {
-	@extend %text;
-}
-
-a {
-	@extend %link;
-}
-
-.blockquote {
-	@extend %blockquote;
-}
-
-.neat-container {
-
-}
-
-.box {
-
-}
-
-.quote {
-
-}
-
-.media-list {
-
-}
-
-.thing {
-	@extend %radio-input;
-}

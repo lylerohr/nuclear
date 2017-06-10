@@ -1,83 +1,13 @@
-/************************************
+.button--icon-left {
+	@extend %button--icon-left;
+	&::before {
+		content: "\f11b";
+	}
+}
 
-	BUTTONS
-
-************************************/
-
-
-/************************************
-	DEFAULT BUTTON CONFIG
-
-	Use this to create your base button atom.
-	You may overwrite/extend and, all, or none of the CSS properties using the $button map.
-
-************************************/
-
-// Default button styles
-// @extend %button
-$button: (
-	font-family: font-family(primary),
-	font-size: 1rem,
-	color: color(brand-primary),
-	background-color: transparent,
-	border: #{2px solid color(brand-primary)},
-	border-radius: .3rem,
-/*	property: value,
-*/
-);
-
-$button-hover: (
-	background-color: color(brand-primary),
-	color: #ffffff
-);
-
-$button-active: (
-	background-color: color(brand-primary, dark),
-	color: #ffffff,
-	outline: none
-);
-
-// Initialize the %button placeholder class - http://thesassway.com/intermediate/understanding-placeholder-selectors
-@include button($button, $button-hover, $button-active);
-
-/************************************
-	EO DEFAULT BUTTON CONFIG
-************************************/
-
-
-/************************************
-
-	BUTTON MODIFIERS
-
-	To create a new modifier, create a new button map.
-	The button map must contain a "name" key.
-
-	To instnciate, @include the button() mixin with the fourth argument as your new button map.
-
-	Example:
-
-	$NEW-button: (
-		name: 'NEW-button',
-		css-property: value,
-	);
-	@include button($button, $button-hover, $button-active, $NEW-button);
-
-************************************/
-
-// Button variations
-// @extend %<name>
-$large-button: (
-	name: 'large-button',
-	padding: #{2rem 4rem},
-	margin: #{.5rem 0},
-	font-size: 2rem,
-);
-@include button($button, $button-hover, $button-active, $large-button);
-
-
-$small-button: (
-	name: 'small-button',
-	padding: #{.5rem 1rem},
-	font-size: .875rem,
-);
-@include button($button, $button-hover, $button-active, $small-button);
+.button--icon-right {
+	@extend %button--icon-right;
+	&::after {
+		content: "\f11b";
+	}
+}

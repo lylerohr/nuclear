@@ -6,14 +6,13 @@
 
 ************************************/
 
-
 // button constructor
-@mixin button($default: (), $hover: (), $active: (), $modifier: (), $before: (), $after: ()) {
+@mixin button($default: (), $modifier: ()) {
 	// default config styles
 	$default: extend((
 		display: inline-block,
 		margin: 0,
-		padding: #{1rem 2rem},
+		padding: padding(base) padding(extra-large),
 		font-family: inherit,
 		font-weight: inherit,
 		color: color(black),
@@ -36,15 +35,13 @@
 	// create placeholder class merging $default map styles and $modifier map styles
 	%#{map-get($modifier, name)} {
 		@each $name, $value in $modifier {
+			//remove invalid css
 			@if $name != type and $name != name and $name !=responsive-type {
 				#{$name}: #{$value};
 			}
 		}
-		@include state-selectors($hover, $active);
-		@include pseudo-classes($before, $after);
-		@if map-get($modifier, responsive-type) == true {
-			@include type-sizes-responsive(map-get($modifier, size));
-		}
+		@include pseudo-constructor($modifier); /* creates all pseudo classes & elements if passed in $modifier */
+		@include responsive-type($modifier); /* activates/deactivates responsive type */
 	}
 }
 
@@ -77,13 +74,13 @@
 	// create placeholder class merging $default map styles and $modifier map styles
 	%#{map-get($modifier, name)} {
 		@each $name, $value in $modifier {
+			//remove invalid css
 			@if $name != size and $name != name and $name !=responsive-type {
 				#{$name}: #{$value};
 			}
 		}
-		@if map-get($modifier, responsive-type) == true {
-			@include type-sizes-responsive(map-get($modifier, size));
-		}
+		@include pseudo-constructor($modifier);
+		@include responsive-type($modifier);
 	}
 }
 
@@ -114,18 +111,18 @@
 	// create placeholder class merging $default map styles and $modifier map styles
 	%#{map-get($modifier, name)} {
 		@each $name, $value in $modifier {
+			//remove invalid css
 			@if $name != size and $name != name and $name !=responsive-type {
 				#{$name}: #{$value};
 			}
 		}
-		@if map-get($modifier, responsive-type) == true {
-			@include type-sizes-responsive(map-get($modifier, size));
-		}
+		@include pseudo-constructor($modifier);
+		@include responsive-type($modifier);
 	}
 }
 
 // link constructor
-@mixin link($default: (), $hover: (), $active: (), $modifier: (), $before: (), $after: ()) {
+@mixin link($default: (), $modifier: ()) {
 	// default config styles
 	$default: extend((
 		display: inline,
@@ -153,18 +150,13 @@
 	// create placeholder class merging $default map styles and $modifier map styles
 	%#{map-get($modifier, name)} {
 		@each $name, $value in $modifier {
+			//remove invalid css
 			@if $name != size and $name != name and $name !=responsive-type {
 				#{$name}: #{$value};
 			}
 		}
-
-		@include state-selectors($hover, $active);
-
-		@include pseudo-classes($before, $after);
-
-		@if map-get($modifier, responsive-type) == true {
-			@include type-sizes-responsive(map-get($modifier, size));
-		}
+		@include pseudo-constructor($modifier);
+		@include responsive-type($modifier);
 	}
 }
 
@@ -312,13 +304,13 @@
 	// create placeholder class merging $default map styles and $modifier map styles
 	%#{map-get($modifier, name)} {
 		@each $name, $value in $modifier {
+			//remove invalid css
 			@if $name != type and $name != name and $name !=responsive-type {
 				#{$name}: #{$value};
 			}
 		}
-		@if map-get($modifier, responsive-type) == true {
-			@include type-sizes-responsive(map-get($modifier, size));
-		}
+		@include pseudo-constructor($modifier);
+		@include responsive-type($modifier);
 	}
 }
 
@@ -351,13 +343,13 @@
 	// create placeholder class merging $default map styles and $modifier map styles
 	%#{map-get($modifier, name)} {
 		@each $name, $value in $modifier {
+			//remove invalid css
 			@if $name != type and $name != name and $name !=responsive-type {
 				#{$name}: #{$value};
 			}
 		}
-		@if map-get($modifier, responsive-type) == true {
-			@include type-sizes-responsive(map-get($modifier, size));
-		}
+		@include pseudo-constructor($modifier);
+		@include responsive-type($modifier);
 	}
 }
 
@@ -390,12 +382,12 @@
 	// create placeholder class merging $default map styles and $modifier map styles
 	%#{map-get($modifier, name)} {
 		@each $name, $value in $modifier {
+			//remove invalid css
 			@if $name != type and $name != name and $name !=responsive-type {
 				#{$name}: #{$value};
 			}
 		}
-		@if map-get($modifier, responsive-type) == true {
-			@include type-sizes-responsive(map-get($modifier, size));
-		}
+		@include pseudo-constructor($modifier);
+		@include responsive-type($modifier);
 	}
 }

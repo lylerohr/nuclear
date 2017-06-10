@@ -7,13 +7,47 @@
       @content;
     }
   }
-
   @else {
     @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
         + "Please make sure it is defined in `$breakpoints` map.";
   }
 }
 
+// BEM
+@mixin element($name) {
+  @at-root #{&}__#{$name} {
+    @content;
+  }
+}
+
+@mixin modifier($name) {
+  @at-root #{&}--#{$name} {
+    @content;
+  }
+}
+
+@mixin responsive-type($modifier) {
+	@if map-get($modifier, responsive-type) == true {
+		@include type-sizes-responsive(map-get($modifier, size));
+	}
+}
+
+
+@mixin pseudo-constructor($modifier) {
+	@each $val-name, $y in $modifier {
+		@if str-index($val-name, ":") {
+			$pseudo-name: str-slice($val-name, 2);
+			&:#{$pseudo-name} {
+				@each $name, $value in map-get-deep($modifier, $val-name) {
+					#{$name}: #{$value};
+				}
+			}
+		}
+	}
+}
+
+
+// Responsive type
 @mixin type-sizes-responsive($size) {
 	font-size: rem(map-get-deep($type-sizes, $size, extra-small, font-size));
 	line-height: rem(map-get-deep($type-sizes, $size, extra-small, line-height) * map-get-deep($type-sizes, $size, extra-small, font-size));
@@ -57,7 +91,8 @@
 }
 
 
-@mixin pseudo-classes($before, $after) {
+// Add Pseudo Classes
+@mixin pseudo-classes($before: (), $after: ()) {
     &::before {
         @each $name, $value in $before {
             #{$name}: #{$value};
@@ -70,7 +105,9 @@
     }
 }
 
-@mixin state-selectors($hover, $active) {
+
+// Add State Selectors
+@mixin state-selectors($hover: (), $active: ()) {
     &:hover {
         @each $name, $value in $hover {
             #{$name}: #{$value};
