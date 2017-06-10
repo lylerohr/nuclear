@@ -1,0 +1,42 @@
+/*
+//@mixin fontface($default: (), $fontname) {
+//	$default: extend((
+//		font-family: '#{$fontname}',
+//		src: url('../fonts/#{$fontname}.eot'),
+//		src: url('../fonts/#{$fontname}.eot?#iefix') format('embedded-opentype'), url('fonts/#{$fontname}.woff') format('woff'), url('fonts/#{$fontname}.ttf') format('truetype'),
+//		font-weight: normal,
+//		font-style: normal,
+//	), $default);
+//}
+*/
+
+/*
+	&:hover {
+		@each $name, $value in map-get-deep($modifier, hover) {
+			#{$name}: #{$value};
+		}
+	}
+	&:active {
+		@each $name, $value in map-get-deep($modifier, active) {
+			#{$name}: #{$value};
+		}
+	}
+	&::before {
+		@each $name, $value in map-get-deep($modifier, before) {
+			@if $name == content {
+				#{$name}: "$value";
+			} @else {
+				#{$name}: #{$value};
+			}
+		}
+	}
+	&::after {
+		@each $name, $value in map-get-deep($modifier, after) {
+			@if $name == content {
+				#{$name}: "$value";
+			} @else {
+				#{$name}: #{$value};
+			}
+		}
+	}
+	*/

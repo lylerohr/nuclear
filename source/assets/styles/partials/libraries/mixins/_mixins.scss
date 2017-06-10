@@ -1,34 +1,68 @@
 @import "constructors";
 
 // @media breakpoints
-@mixin respond-to($breakpoint) { 
+@mixin respond-to($breakpoint) {
   @if map-has-key($breakpoints, $breakpoint) {
     @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
       @content;
     }
   }
-
   @else {
     @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
         + "Please make sure it is defined in `$breakpoints` map.";
   }
 }
 
+// BEM
+@mixin element($name) {
+  @at-root #{&}__#{$name} {
+    @content;
+  }
+}
+
+@mixin modifier($name) {
+  @at-root #{&}--#{$name} {
+    @content;
+  }
+}
+
+@mixin responsive-type($modifier) {
+	@if map-get($modifier, responsive-type) == true {
+		@include type-sizes-responsive(map-get($modifier, size));
+	}
+}
+
+
+@mixin pseudo-constructor($modifier) {
+	@each $val-name, $y in $modifier {
+		@if str-index($val-name, ":") {
+			$pseudo-name: str-slice($val-name, 2);
+			&:#{$pseudo-name} {
+				@each $name, $value in map-get-deep($modifier, $val-name) {
+					#{$name}: #{$value};
+				}
+			}
+		}
+	}
+}
+
+
+// Responsive type
 @mixin type-sizes-responsive($size) {
 	font-size: rem(map-get-deep($type-sizes, $size, extra-small, font-size));
 	line-height: rem(map-get-deep($type-sizes, $size, extra-small, line-height) * map-get-deep($type-sizes, $size, extra-small, font-size));
-	
-	
+
+
 	@media screen and (min-width: breakpoint(small)) {
 		font-size: rem(map-get-deep($type-sizes, $size, small, font-size));
 		line-height: rem(map-get-deep($type-sizes, $size, small, line-height) * map-get-deep($type-sizes, $size, small, font-size));
 	}
-	
+
 	@media screen and (min-width: breakpoint(medium)) {
 		font-size: rem(map-get-deep($type-sizes, $size, medium, font-size));
 		line-height: rem(map-get-deep($type-sizes,$size, medium, line-height) * map-get-deep($type-sizes, $size, medium, font-size));
 	}
-	
+
 	@media screen and (min-width: breakpoint(large)) {
 		font-size: rem(map-get-deep($type-sizes, $size, large, font-size));
 		line-height: rem(map-get-deep($type-sizes, $size, large, line-height) * map-get-deep($type-sizes, $size, large, font-size));
@@ -38,18 +72,18 @@
 @mixin heading-sizes-responsive($size) {
 	font-size: rem(map-get-deep($heading-sizes, $size, extra-small, font-size));
 	line-height: rem(map-get-deep($heading-sizes, $size, extra-small, line-height) * map-get-deep($heading-sizes, $size, extra-small, font-size));
-	
-	
+
+
 	@media screen and (min-width: breakpoint(small)) {
 		font-size: rem(map-get-deep($heading-sizes, $size, small, font-size));
 		line-height: rem(map-get-deep($heading-sizes, $size, small, line-height) * map-get-deep($heading-sizes, $size, small, font-size));
 	}
-	
+
 	@media screen and (min-width: breakpoint(medium)) {
 		font-size: rem(map-get-deep($heading-sizes, $size, medium, font-size));
 		line-height: rem(map-get-deep($heading-sizes, $size, medium, line-height) * map-get-deep($heading-sizes, $size, medium, font-size));
 	}
-	
+
 	@media screen and (min-width: breakpoint(large)) {
 		font-size: rem(map-get-deep($heading-sizes, $size, large, font-size));
 		line-height: rem(map-get-deep($heading-sizes, $size, large, line-height) * map-get-deep($heading-sizes, $size, large, font-size));
@@ -57,4 +91,32 @@
 }
 
 
+// Add Pseudo Classes
+@mixin pseudo-classes($before: (), $after: ()) {
+    &::before {
+        @each $name, $value in $before {
+            #{$name}: #{$value};
+        }
+    }
+    &::after {
+        @each $name, $value in $after {
+            #{$name}: #{$value};
+        }
+    }
+}
 
+
+// Add State Selectors
+@mixin state-selectors($hover: (), $active: ()) {
+    &:hover {
+        @each $name, $value in $hover {
+            #{$name}: #{$value};
+        }
+    }
+    &:active,
+    &:focus {
+        @each $name, $value in $active {
+            #{$name}: #{$value};
+        }
+    }
+}

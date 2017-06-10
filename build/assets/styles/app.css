@@ -1,1 +1,1068 @@
-/*! Nuclear v0.1 | GPL 3.0 License | github.com/lylerohr/nuclear */@import url(../../bower_components/normalize-css/normalize.css);html{font-size:16px !important}body{margin:0}.mid-button{display:inline-block;margin:0;padding:1rem 2rem;font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-weight:inherit;color:#cd453d;line-height:inherit;text-align:center;vertical-align:middle;touch-action:manipulation;cursor:pointer;background-image:none;background-color:transparent;border:2px solid #cd453d;white-space:nowrap;size:base;font-size:1rem;border-radius:.3rem;font-size:1rem;line-height:1.1rem}.mid-button:hover{background-color:#cd453d;color:#fff}.mid-button:active,.mid-button:focus{background-color:#ab332c;color:#fff;outline:none}@media screen and (min-width: 768px){.mid-button{font-size:1rem;line-height:1.1rem}}@media screen and (min-width: 992px){.mid-button{font-size:1rem;line-height:1.1rem}}@media screen and (min-width: 1200px){.mid-button{font-size:1rem;line-height:1.1rem}}.big-button{display:inline-block;margin:0.5rem 0;padding:2rem 4rem;font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-weight:inherit;color:#cd453d;line-height:inherit;text-align:center;vertical-align:middle;touch-action:manipulation;cursor:pointer;background-image:none;background-color:transparent;border:2px solid #cd453d;white-space:nowrap;size:base;font-size:2rem;border-radius:.3rem;font-size:1rem;line-height:1.1rem}.big-button:hover{background-color:#cd453d;color:#fff}.big-button:active,.big-button:focus{background-color:#ab332c;color:#fff;outline:none}@media screen and (min-width: 768px){.big-button{font-size:1rem;line-height:1.1rem}}@media screen and (min-width: 992px){.big-button{font-size:1rem;line-height:1.1rem}}@media screen and (min-width: 1200px){.big-button{font-size:1rem;line-height:1.1rem}}.small-button{display:inline-block;margin:0;padding:0.5rem 1rem;font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-weight:inherit;color:#cd453d;line-height:inherit;text-align:center;vertical-align:middle;touch-action:manipulation;cursor:pointer;background-image:none;background-color:transparent;border:2px solid #cd453d;white-space:nowrap;size:base;font-size:.875rem;border-radius:.3rem;font-size:1rem;line-height:1.1rem}.small-button:hover{background-color:#cd453d;color:#fff}.small-button:active,.small-button:focus{background-color:#ab332c;color:#fff;outline:none}@media screen and (min-width: 768px){.small-button{font-size:1rem;line-height:1.1rem}}@media screen and (min-width: 992px){.small-button{font-size:1rem;line-height:1.1rem}}@media screen and (min-width: 1200px){.small-button{font-size:1rem;line-height:1.1rem}}h1{display:inline-block;margin:1rem 0 2rem;padding:0;font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-weight:500;color:#cd453d;text-align:left;vertical-align:inherit;touch-action:auto;cursor:inherit;background-image:none;background-color:transparent;border:none #777;white-space:normal;font-size:4.5rem;line-height:4.95rem}@media screen and (min-width: 768px){h1{font-size:5.25rem;line-height:5.775rem}}@media screen and (min-width: 992px){h1{font-size:6rem;line-height:6.6rem}}@media screen and (min-width: 1200px){h1{font-size:6.6rem;line-height:7.26rem}}small{display:inline-block;margin:1rem 0 1.5rem;padding:0;font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-weight:100;color:#5e5d5d;text-align:left;vertical-align:inherit;touch-action:auto;cursor:inherit;background-image:none;background-color:transparent;border:none #777;white-space:normal;margin-left:1rem;font-size:1.5rem;line-height:1.65rem}@media screen and (min-width: 768px){small{font-size:1.5rem;line-height:1.65rem}}@media screen and (min-width: 992px){small{font-size:1.5rem;line-height:1.65rem}}@media screen and (min-width: 1200px){small{font-size:1.5rem;line-height:1.65rem}}.thing{display:block;width:100%;height:inherit;margin:1rem 0;padding:0;font-size:1rem;line-height:1.3;color:#444;background-color:transparent;background-image:none;border:0.1rem solid #777;border-radius:.25rem;box-shadow:none;box-sizing:border-box;transition:outline-color 100ms;font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-size:.75rem;line-height:.825rem;display:inline;width:initial}@media screen and (min-width: 768px){.thing{font-size:.875rem;line-height:1.05rem}}@media screen and (min-width: 992px){.thing{font-size:1rem;line-height:1.3rem}}@media screen and (min-width: 1200px){.thing{font-size:1.1rem;line-height:1.54rem}}.thing::-ms-expand{border:0;background-color:transparent}[disabled].thing,[readonly].thing,fieldset[disabled] .thing{background-color:#5e5d5d;opacity:1}.thing:focus{outline-color:#ecbab7}p{display:inline;margin:0;padding:0;font-family:Georgia,Times New Roman,sans-serif;font-weight:inherit;color:inherit;text-align:left;vertical-align:inherit;touch-action:auto;cursor:inherit;background-image:none;background-color:transparent;border:none #777;transition:250ms;white-space:normal;font-size:1}p{display:block;margin:0;padding:0;font-family:Georgia,Times New Roman,sans-serif;font-weight:inherit;color:#444;text-align:left;vertical-align:inherit;touch-action:auto;cursor:inherit;background-image:none;background-color:transparent;border:none #777;white-space:normal;font-size:1;font-size:.75rem;line-height:.825rem}@media screen and (min-width: 768px){p{font-size:.875rem;line-height:1.05rem}}@media screen and (min-width: 992px){p{font-size:1rem;line-height:1.3rem}}@media screen and (min-width: 1200px){p{font-size:1.1rem;line-height:1.54rem}}.blockquote{display:block;margin:0;padding:1rem;font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-weight:100;color:#444;text-align:left;vertical-align:inherit;touch-action:auto;cursor:inherit;background-image:none;background-color:#f7f6f6;border:none #777;white-space:normal;font-size:1;border-radius:.5rem;font-size:1.125rem;line-height:1.2375rem}@media screen and (min-width: 768px){.blockquote{font-size:1.3125rem;line-height:1.575rem}}@media screen and (min-width: 992px){.blockquote{font-size:1.5rem;line-height:1.95rem}}@media screen and (min-width: 1200px){.blockquote{font-size:1.65rem;line-height:2.31rem}}.buttons .box{width:calc(33.3333333333% - 26.6666666667px);float:left;margin-left:20px;text-align:center}.form-container::after{clear:both;content:"";display:block}.box{width:calc(25% - 25px);float:left;margin-left:20px}.quote{width:calc(33.3333333333% - 26.6666666667px);float:left;margin-left:20px}
+/*! Cordial v0.1.3 | GPL 3.0 License | https://github.com/lylerohr/nuclear */
+/************************************
+
+	Cordial
+	Main Scss file
+
+	Cordial is a Sass and Atomic based framework that models the canonical
+	CSS Zen Garden minimalism and separation of scope.  The aim is to free
+	your markup form framework-specific classes and allow for full structural
+	and theme control via CSS.
+
+	Cordial utilizes the Brad Frost's, Atomic Design Methodology
+	(http://atomicdesign.bradfrost.com/) to organize absolutely everything.
+
+
+	TODO:
+	1. Create a nuclear-config.scss
+		> Allows user to include/exclude scss files using a map
+	2. Create a comment design pattern
+		> Fully comment code to act as initial documentation
+	3. Optimize constructor default output
+		> Optimize default placeholder classes
+
+
+************************************/
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif|Roboto:300,400,700");
+@import url(../../bower_components/font-awesome/css/font-awesome.min.css);
+@import url(../../bower_components/normalize-css/normalize.css);
+/********************
+
+FUNCTIONS
+
+********************/
+/*************************
+	
+	UTILITIES
+
+*************************/
+/*************************
+
+	MAP FUNCTIONS - STRUCTURE LAYER
+
+*************************/
+/*************************
+
+	MAP FUNCTIONS - THEME LAYER
+
+*************************/
+/************************************
+
+	CONSTRUCTORS
+
+	TODO: explore using a map of maps for constructor inputs
+
+************************************/
+/*
+	IN PROGRESS
+============================================================================ */
+html {
+  font-size: 16px !important; }
+
+body {
+  margin: 0; }
+
+.container {
+  margin: 1.5rem 1rem;
+  clear: both; }
+
+/*******
+
+	Cordial Framework
+	Theme Configuration
+
+*******/
+/************************************
+
+	TYPOGRAPHY
+
+************************************/
+/************************************
+
+	COLORS
+
+************************************/
+/************************************
+
+	DIMENSION
+
+************************************/
+/*
+
+	$type-sizes
+		> type-size name
+			> screen-size name
+
+	primarily utilized to create type size classes found in _type-sizes.scss
+
+*/
+/************************************
+
+	Atoms
+
+************************************/
+/************************************
+
+	ALERTS
+
+************************************/
+/************************************
+	DEFAULT ALERT CONFIG
+
+	Use this to create your base text atom(s).
+	You may overwrite/extend and, all, or none of the CSS properties using the $text map.
+
+************************************/
+/************************************
+	EO DEFAULT ALERTS CONFIG
+************************************/
+/************************************
+
+	ALERTS MODIFIERS
+
+	To create a new modifier, create a new alert map.
+	The alert map must contain a 'name' key.
+		> 'name' is used to create the placeholder class.
+
+	Responsive Type:
+	If you want to utilize structured, responsive type, use the 'size' key.
+
+	To instntiate, @include the alert() mixin with the second argument as your new alert map.
+
+	Example:
+
+	$NEW-alert: (
+		name: 'NEW-alert',
+		css-property: value,
+	);
+	@include alert($heading, $NEW-alert);
+
+************************************/
+/************************************
+
+	badges
+
+************************************/
+/************************************
+	DEFAULT badge CONFIG
+
+	Use this to create your base text atom(s).
+	You may overwrite/extend and, all, or none of the CSS properties using the $text map.
+
+************************************/
+/************************************
+	EO DEFAULT badges CONFIG
+************************************/
+/************************************
+
+	badges MODIFIERS
+
+	To create a new modifier, create a new badge map.
+	The badge map must contain a 'name' key.
+		> 'name' is used to create the placeholder class.
+
+	Responsive Type:
+	If you want to utilize structured, responsive type, use the 'size' key.
+
+	To instntiate, @include the badge() mixin with the second argument as your new badge map.
+
+	Example:
+
+	$NEW-badge: (
+		name: 'NEW-badge',
+		css-property: value,
+	);
+	@include badge($heading, $NEW-badge);
+
+************************************/
+/************************************
+
+	BUTTONS
+
+************************************/
+/************************************
+	DEFAULT BUTTON CONFIG
+
+	Use this to create your base button atom.
+	You may overwrite/extend and, all, or none of the CSS properties using the $button map.
+
+************************************/
+/************************************
+	EO DEFAULT BUTTON CONFIG
+************************************/
+/************************************
+
+	BUTTON MODIFIERS
+
+	To create a new modifier, create a new button map.
+	The button map must contain a "name" key.
+
+	To instnciate, @include the button() mixin with the fourth argument as your new button map.
+
+	Example:
+
+	$NEW-button: (
+		name: 'NEW-button',
+		css-property: value,
+	);
+	@include button($button, $button-hover, $button-active, $NEW-button);
+
+************************************/
+.button--icon-left {
+  display: inline-block;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: inherit;
+  color: #2F2933;
+  line-height: inherit;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  background-color: transparent;
+  border: 2px solid #2F2933;
+  white-space: nowrap;
+  size: base;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  :hover: (background-color: #2F2933, color: #d0d6cc);
+  :active: (background-color: #221e25, color: #dde1da, outline: none);
+  :before: (font-family: FontAwesome, margin-right: 0.5rem, content: "");
+  /* creates all pseudo classes & elements if passed in $modifier */
+  font-size: 1rem;
+  line-height: 1.2rem;
+  /* activates/deactivates responsive type */ }
+  .button--icon-left:hover {
+    background-color: #2F2933;
+    color: #d0d6cc; }
+  .button--icon-left:active {
+    background-color: #221e25;
+    color: #dde1da;
+    outline: none; }
+  .button--icon-left:before {
+    font-family: FontAwesome;
+    margin-right: 0.5rem; }
+  @media screen and (min-width: 768px) {
+    .button--icon-left {
+      font-size: 1rem;
+      line-height: 1.2rem; } }
+  @media screen and (min-width: 992px) {
+    .button--icon-left {
+      font-size: 1rem;
+      line-height: 1.3rem; } }
+  @media screen and (min-width: 1200px) {
+    .button--icon-left {
+      font-size: 1.1rem;
+      line-height: 1.54rem; } }
+
+.button--icon-right {
+  display: inline-block;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: inherit;
+  color: #2F2933;
+  line-height: inherit;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  background-color: transparent;
+  border: 2px solid #2F2933;
+  white-space: nowrap;
+  size: base;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  :hover: (background-color: #2F2933, color: #d0d6cc);
+  :active: (background-color: #221e25, color: #dde1da, outline: none);
+  :after: (font-family: FontAwesome, margin-left: 0.5rem, content: "");
+  /* creates all pseudo classes & elements if passed in $modifier */
+  font-size: 1rem;
+  line-height: 1.2rem;
+  /* activates/deactivates responsive type */ }
+  .button--icon-right:hover {
+    background-color: #2F2933;
+    color: #d0d6cc; }
+  .button--icon-right:active {
+    background-color: #221e25;
+    color: #dde1da;
+    outline: none; }
+  .button--icon-right:after {
+    font-family: FontAwesome;
+    margin-left: 0.5rem; }
+  @media screen and (min-width: 768px) {
+    .button--icon-right {
+      font-size: 1rem;
+      line-height: 1.2rem; } }
+  @media screen and (min-width: 992px) {
+    .button--icon-right {
+      font-size: 1rem;
+      line-height: 1.3rem; } }
+  @media screen and (min-width: 1200px) {
+    .button--icon-right {
+      font-size: 1.1rem;
+      line-height: 1.54rem; } }
+
+/************************************
+
+	HEADINGS
+
+************************************/
+/************************************
+	DEFAULT HEADING CONFIG
+
+	Use this to create your base heading atom(s).
+	You may overwrite/extend and, all, or none of the CSS properties using the $heading map.
+
+************************************/
+/************************************
+	EO DEFAULT HEADING CONFIG
+************************************/
+/************************************
+
+	HEADING MODIFIERS
+
+	To create a new modifier, create a new heading map.
+	The heading map must contain a 'name' key.
+		> 'name' is used to create the placeholder class.
+
+	Responsive Type:
+	If you want to utilize structured, responsive type, use the 'size' key.
+
+	To instnciate, @include the heading() mixin with the fourth argument as your new heading map.
+
+	Example:
+
+	$NEW-heading: (
+		name: 'NEW-heading',
+		size: 'size',
+		css-property: value,
+	);
+	@include heading($heading, $NEW-heading);
+
+************************************/
+/*
+Potential alternate syntax
+
+@include heading($heading, (
+	name: 'name',
+	size: giant,
+));
+*/
+.cd--page__title {
+  display: block;
+  margin: 1rem 0 2rem;
+  padding: 0;
+  font-family: Noto Serif, Times New Roman, sans-serif;
+  font-weight: 100;
+  color: #2F2933;
+  text-align: left;
+  vertical-align: inherit;
+  touch-action: auto;
+  cursor: inherit;
+  background-image: none;
+  background-color: transparent;
+  border: none #777777;
+  white-space: normal;
+  font-size: 3rem;
+  line-height: 3.3rem; }
+  @media screen and (min-width: 768px) {
+    .cd--page__title {
+      font-size: 3.5rem;
+      line-height: 4.2rem; } }
+  @media screen and (min-width: 992px) {
+    .cd--page__title {
+      font-size: 4rem;
+      line-height: 5.2rem; } }
+  @media screen and (min-width: 1200px) {
+    .cd--page__title {
+      font-size: 4.4rem;
+      line-height: 6.16rem; } }
+
+.cd--component__section-header {
+  display: block;
+  margin: 1rem 0 1.5rem;
+  padding: 0;
+  font-family: Noto Serif, Times New Roman, sans-serif;
+  font-weight: 100;
+  color: #2F2933;
+  text-align: left;
+  vertical-align: inherit;
+  touch-action: auto;
+  cursor: inherit;
+  background-image: none;
+  background-color: transparent;
+  border: none #777777;
+  white-space: normal;
+  font-size: 1.125rem;
+  line-height: 1.2375rem; }
+  @media screen and (min-width: 768px) {
+    .cd--component__section-header {
+      font-size: 1.3125rem;
+      line-height: 1.575rem; } }
+  @media screen and (min-width: 992px) {
+    .cd--component__section-header {
+      font-size: 1.5rem;
+      line-height: 1.95rem; } }
+  @media screen and (min-width: 1200px) {
+    .cd--component__section-header {
+      font-size: 1.65rem;
+      line-height: 2.31rem; } }
+
+.cd--masthead__client-name, .cd--component__column-header {
+  display: block;
+  margin: 1rem 0 1.5rem;
+  padding: 0;
+  font-family: Noto Serif, Times New Roman, sans-serif;
+  font-weight: bold;
+  color: #080709;
+  text-align: left;
+  vertical-align: inherit;
+  touch-action: auto;
+  cursor: inherit;
+  background-image: none;
+  background-color: transparent;
+  border: none #777777;
+  white-space: normal;
+  font-size: 0.765625rem;
+  line-height: 0.8421875rem; }
+  @media screen and (min-width: 768px) {
+    .cd--masthead__client-name, .cd--component__column-header {
+      font-size: 0.875rem;
+      line-height: 1.05rem; } }
+  @media screen and (min-width: 992px) {
+    .cd--masthead__client-name, .cd--component__column-header {
+      font-size: 0.875rem;
+      line-height: 1.1375rem; } }
+  @media screen and (min-width: 1200px) {
+    .cd--masthead__client-name, .cd--component__column-header {
+      font-size: 0.875rem;
+      line-height: 1.225rem; } }
+
+.cd--component__title {
+  display: block;
+  margin: 1rem 0 1.5rem;
+  padding: 0;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  color: #2F2933;
+  text-align: left;
+  vertical-align: inherit;
+  touch-action: auto;
+  cursor: inherit;
+  background-image: none;
+  background-color: transparent;
+  border: none #777777;
+  white-space: normal;
+  text-transform: uppercase;
+  font-size: 0.765625rem;
+  line-height: 0.8421875rem; }
+  @media screen and (min-width: 768px) {
+    .cd--component__title {
+      font-size: 0.875rem;
+      line-height: 1.05rem; } }
+  @media screen and (min-width: 992px) {
+    .cd--component__title {
+      font-size: 0.875rem;
+      line-height: 1.1375rem; } }
+  @media screen and (min-width: 1200px) {
+    .cd--component__title {
+      font-size: 0.875rem;
+      line-height: 1.225rem; } }
+
+.section__title {
+  display: block;
+  margin: 1rem 0 1.5rem;
+  padding: 0;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: inherit;
+  color: #2F2933;
+  text-align: left;
+  vertical-align: inherit;
+  touch-action: auto;
+  cursor: inherit;
+  background-image: none;
+  background-color: transparent;
+  border: none #777777;
+  white-space: normal;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  line-height: 1.65rem; }
+  @media screen and (min-width: 768px) {
+    .section__title {
+      font-size: 1.75rem;
+      line-height: 2.1rem; } }
+  @media screen and (min-width: 992px) {
+    .section__title {
+      font-size: 2rem;
+      line-height: 2.6rem; } }
+  @media screen and (min-width: 1200px) {
+    .section__title {
+      font-size: 2.2rem;
+      line-height: 3.08rem; } }
+
+/************************************
+
+	INPUTS
+
+************************************/
+/************************************
+	DEFAULT INPUT CONFIG
+
+	Use this to create your base input atom.
+	You may overwrite/extend and, all, or none of the CSS properties using the $input map.
+
+************************************/
+/************************************
+	EO DEFAULT INPUT CONFIG
+************************************/
+/************************************
+
+	INPUT MODIFIERS
+
+	To create a new modifier, create a new input map.
+	The input map must contain a "name" key.
+
+	The input map may also contain the 'form-element' key and the 'element-type' key.
+		> 	'form-element' indicates the primary form tag (e.g. input, textarea, select, etc.)
+			and applies additional default styles to help it render properly.
+		> 	'input-type' is most useful for 'form-element: input' as it has many types
+			(e.g. text, date, radio, etc.)
+
+	To instantiate, @include the input() mixin with the fourth argument as your new input map.
+
+	Example:
+
+	$NEW-input: (
+		name: 'NEW-input',
+		form-element: INPUT,
+		element-type: TYPE,
+		css-property: value,
+	);
+	@include button($button, $button-hover, $button-active, $NEW-button);
+
+************************************/
+/************************************
+
+	labels
+
+************************************/
+/************************************
+	DEFAULT label CONFIG
+
+	Use this to create your base text atom(s).
+	You may overwrite/extend and, all, or none of the CSS properties using the $text map.
+
+************************************/
+/************************************
+	EO DEFAULT labels CONFIG
+************************************/
+/************************************
+
+	labels MODIFIERS
+
+	To create a new modifier, create a new label map.
+	The label map must contain a 'name' key.
+		> 'name' is used to create the placeholder class.
+
+	Responsive Type:
+	If you want to utilize structured, responsive type, use the 'size' key.
+
+	To instntiate, @include the label() mixin with the second argument as your new label map.
+
+	Example:
+
+	$NEW-label: (
+		name: 'NEW-label',
+		css-property: value,
+	);
+	@include label($heading, $NEW-label);
+
+************************************/
+/************************************
+
+	LINKS
+
+************************************/
+/************************************
+	DEFAULT LINK CONFIG
+
+	Use this to create your base text atom(s).
+	You may overwrite/extend and, all, or none of the CSS properties using the $text map.
+
+************************************/
+a,
+.link {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: inherit;
+  color: #BDF271;
+  text-align: left;
+  vertical-align: inherit;
+  touch-action: auto;
+  cursor: pointer;
+  background-image: none;
+  background-color: transparent;
+  border: none #777777;
+  transition: 250ms;
+  white-space: normal;
+  text-decoration: none;
+  hover: (color: #74b911);
+  active: (color: #b2f05a);
+  font-size: 1rem;
+  line-height: 1.2rem; }
+  @media screen and (min-width: 768px) {
+    a,
+    .link {
+      font-size: 1rem;
+      line-height: 1.2rem; } }
+  @media screen and (min-width: 992px) {
+    a,
+    .link {
+      font-size: 1rem;
+      line-height: 1.3rem; } }
+  @media screen and (min-width: 1200px) {
+    a,
+    .link {
+      font-size: 1.1rem;
+      line-height: 1.54rem; } }
+
+/************************************
+	EO DEFAULT TEXT CONFIG
+************************************/
+/************************************
+
+	TEXT MODIFIERS
+
+	To create a new modifier, create a new text map.
+	The text map must contain a 'name' key.
+		> 'name' is used to create the placeholder class.
+
+	Responsive Type:
+	If you want to utilize structured, responsive type, use the 'size' key.
+
+	To instnciate, @include the text() mixin with the fourth argument as your new button map.
+
+	Example:
+
+	$NEW-text: (
+		name: 'NEW-text',
+		size: SIZE,
+		css-property: value,
+	);
+	@include button($heading, $NEW-heading);
+
+************************************/
+a .link__utility,
+.link .link__utility, .media .media__utility-links a {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: inherit;
+  color: #BDF271;
+  text-align: left;
+  vertical-align: inherit;
+  touch-action: auto;
+  cursor: pointer;
+  background-image: none;
+  background-color: transparent;
+  border: none #777777;
+  transition: 250ms;
+  white-space: normal;
+  text-decoration: none;
+  hover: (color: #74b911);
+  active: (color: #b2f05a);
+  font-size: 0.765625rem;
+  line-height: 0.8421875rem; }
+  @media screen and (min-width: 768px) {
+    a .link__utility,
+    .link .link__utility, .media .media__utility-links a {
+      font-size: 0.875rem;
+      line-height: 1.05rem; } }
+  @media screen and (min-width: 992px) {
+    a .link__utility,
+    .link .link__utility, .media .media__utility-links a {
+      font-size: 0.875rem;
+      line-height: 1.1375rem; } }
+  @media screen and (min-width: 1200px) {
+    a .link__utility,
+    .link .link__utility, .media .media__utility-links a {
+      font-size: 0.875rem;
+      line-height: 1.225rem; } }
+
+.section__link--view-more, .section__footer .section__link--view-more {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #BDF271;
+  text-align: left;
+  vertical-align: inherit;
+  touch-action: auto;
+  cursor: pointer;
+  background-image: none;
+  background-color: transparent;
+  border: none #777777;
+  transition: 250ms;
+  white-space: normal;
+  text-decoration: none;
+  hover: (color: #74b911);
+  active: (color: #b2f05a);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  line-height: 0.825rem; }
+  @media screen and (min-width: 768px) {
+    .section__link--view-more, .section__footer .section__link--view-more {
+      font-size: 0.75rem;
+      line-height: 0.9rem; } }
+  @media screen and (min-width: 992px) {
+    .section__link--view-more, .section__footer .section__link--view-more {
+      font-size: 0.75rem;
+      line-height: 0.975rem; } }
+  @media screen and (min-width: 1200px) {
+    .section__link--view-more, .section__footer .section__link--view-more {
+      font-size: 0.75rem;
+      line-height: 1.05rem; } }
+
+/************************************
+
+	TEXT
+
+************************************/
+/************************************
+	DEFAULT HEADING CONFIG
+
+	Use this to create your base text atom(s).
+	You may overwrite/extend and, all, or none of the CSS properties using the $text map.
+
+************************************/
+p {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: inherit;
+  color: #6a6a6a;
+  text-align: left;
+  vertical-align: inherit;
+  touch-action: auto;
+  cursor: inherit;
+  background-image: none;
+  background-color: transparent;
+  border: none #777777;
+  white-space: normal;
+  font-size: 1rem;
+  line-height: 1.2rem; }
+  @media screen and (min-width: 768px) {
+    p {
+      font-size: 1rem;
+      line-height: 1.2rem; } }
+  @media screen and (min-width: 992px) {
+    p {
+      font-size: 1rem;
+      line-height: 1.3rem; } }
+  @media screen and (min-width: 1200px) {
+    p {
+      font-size: 1.1rem;
+      line-height: 1.54rem; } }
+
+/************************************
+	EO DEFAULT TEXT CONFIG
+************************************/
+/************************************
+
+	TEXT MODIFIERS
+
+	To create a new modifier, create a new text map.
+	The text map must contain a 'name' key.
+		> 'name' is used to create the placeholder class.
+
+	Responsive Type:
+	If you want to utilize structured, responsive type, use the 'size' key.
+
+	To instnciate, @include the text() mixin with the fourth argument as your new button map.
+
+	Example:
+
+	$NEW-text: (
+		name: 'NEW-text',
+		size: SIZE,
+		css-property: value,
+	);
+	@include button($heading, $NEW-heading);
+
+************************************/
+.cd--masthead__library-description {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: inherit;
+  color: #6a6a6a;
+  text-align: left;
+  vertical-align: inherit;
+  touch-action: auto;
+  cursor: inherit;
+  background-image: none;
+  background-color: transparent;
+  border: none #777777;
+  white-space: normal;
+  font-size: 0.765625rem;
+  line-height: 0.8421875rem; }
+  @media screen and (min-width: 768px) {
+    .cd--masthead__library-description {
+      font-size: 0.875rem;
+      line-height: 1.05rem; } }
+  @media screen and (min-width: 992px) {
+    .cd--masthead__library-description {
+      font-size: 0.875rem;
+      line-height: 1.1375rem; } }
+  @media screen and (min-width: 1200px) {
+    .cd--masthead__library-description {
+      font-size: 0.875rem;
+      line-height: 1.225rem; } }
+
+pre {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-family: courier, monospace;
+  font-weight: inherit;
+  color: #6a6a6a;
+  text-align: left;
+  vertical-align: inherit;
+  touch-action: auto;
+  cursor: inherit;
+  background-image: none;
+  background-color: transparent;
+  border: none #777777;
+  white-space: pre;
+  font-size: 1rem;
+  line-height: 1.2rem; }
+  @media screen and (min-width: 768px) {
+    pre {
+      font-size: 1rem;
+      line-height: 1.2rem; } }
+  @media screen and (min-width: 992px) {
+    pre {
+      font-size: 1rem;
+      line-height: 1.3rem; } }
+  @media screen and (min-width: 1200px) {
+    pre {
+      font-size: 1.1rem;
+      line-height: 1.54rem; } }
+
+.button--icon-left::before {
+  content: "\f11b"; }
+
+.button--icon-right::after {
+  content: "\f11b"; }
+
+p {
+  padding-bottom: 0.3rem; }
+
+.comment .media__interest img {
+  border-radius: 50%; }
+
+.dropdown .dropdown__container,
+.dropdown--hover .dropdown__container {
+  display: inline-block;
+  position: relative;
+  text-align: center; }
+
+.dropdown .dropdown__description,
+.dropdown--hover .dropdown__description {
+  float: left;
+  padding-right: 1em; }
+
+.dropdown .dropdown__button,
+.dropdown .dropdown__button--hover,
+.dropdown--hover .dropdown__button,
+.dropdown--hover .dropdown__button--hover {
+  cursor: pointer;
+  float: right;
+  position: relative; }
+
+.dropdown .dropdown__button:after,
+.dropdown .dropdown__button--hover:after,
+.dropdown--hover .dropdown__button:after,
+.dropdown--hover .dropdown__button--hover:after {
+  display: block;
+  position: absolute; }
+
+.dropdown .dropdown__menu,
+.dropdown .dropdown__menu--hover,
+.dropdown--hover .dropdown__menu,
+.dropdown--hover .dropdown__menu--hover {
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  display: none;
+  overflow: visible;
+  position: absolute;
+  text-align: left;
+  top: 15px;
+  width: 228px;
+  z-index: 3000;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 #bcb3c2;
+  padding: 0.5rem;
+  list-style: none; }
+
+.dropdown .dropdown__menu li,
+.dropdown .dropdown__menu--hover li,
+.dropdown--hover .dropdown__menu li,
+.dropdown--hover .dropdown__menu--hover li {
+  margin: 0.75rem 0; }
+
+.dropdown .show__menu,
+.dropdown .show__menu--hover,
+.dropdown--hover .show__menu,
+.dropdown--hover .show__menu--hover {
+  display: block;
+  transition: all 0.2s ease-in-out; }
+
+.media,
+.media__body {
+  overflow: hidden;
+  _overflow: visible;
+  zoom: 1; }
+
+.media {
+  margin: 1.5rem;
+  margin-left: 0; }
+  .media .media__interest {
+    float: left;
+    margin-right: 1rem; }
+  .media .media__interest img {
+    display: block; }
+  .media .media__interest--left {
+    float: right;
+    margin-left: 1rem; }
+  .media .media__date {
+    float: right; }
+  .media .media__read-more-button {
+    float: right; }
+  .media .media__utility-links {
+    display: none; }
+  .media .media__nest {
+    padding-top: 0.3rem;
+    clear: both; }
+  .media .media--nested {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem; }
+
+.media.media--slim .media__text,
+.media.media--slim .media__tags,
+.media.media--slim .media__read-more-button {
+  display: none; }
+
+.media.media--slim .media__date {
+  float: none; }
+
+.media.media--no-interest .media__interest {
+  display: none; }
+
+.section {
+  margin: 1rem 0; }
+
+.section__header,
+.section__body,
+.section__footer {
+  overflow: hidden;
+  _overflow: visible;
+  zoom: 1;
+  position: relative; }
+
+.section__title {
+  display: inline-block;
+  max-width: 65%; }
+
+.section__link--view-more {
+  display: block;
+  text-align: left;
+  margin-top: 0.5rem; }
+  @media (min-width: 768px) {
+    .section__link--view-more {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(0, -50%);
+      margin-top: 0; } }
+
+.section__body {
+  margin: 1rem 0; }
+
+.section__footer .section__link--view-more {
+  position: relative; }
+
+.cd--component__menu {
+  width: 100%;
+  float: none; }
+  @media (min-width: 768px) {
+    .cd--component__menu {
+      width: 16.666%;
+      float: left;
+      position: fixed;
+      height: 100vh;
+      border-right: 1px solid #7f7f7f; } }
+
+.cd--masthead__client-name {
+  font-weight: bold; }
+
+.cd--masthead__library-name {
+  display: block; }
+
+.cd--component__body {
+  width: 100%;
+  float: none; }
+  @media (min-width: 768px) {
+    .cd--component__body {
+      width: 83.334%;
+      padding-left: 16.666%;
+      float: left; } }
+
+.cd--page__header {
+  min-height: 150px;
+  background-color: #01A2A6;
+  padding: 0.5rem;
+  position: relative; }
+  @media (min-width: 768px) {
+    .cd--page__header {
+      margin-left: 16.666%; } }
+
+.cd--page__title {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  width: 100%; }
+
+.cd--component__section-header {
+  font-weight: bold;
+  margin-top: 8rem;
+  background-color: #fcfcfc;
+  padding: 0.7rem; }
+
+.cd--component__title {
+  font-weight: bold;
+  margin-top: 4rem;
+  margin-bottom: 0.5rem; }
+
+.cd--component__wrapper {
+  border: 1px solid #eeebef;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  -moz-box-shadow: 0 1px 2px 0 #e1dde4;
+  -webkit-box-shadow: 0 1px 2px 0 #e1dde4;
+  box-shadow: 0 1px 2px 0 #e1dde4; }

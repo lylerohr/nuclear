@@ -1,0 +1,95 @@
+/************************************
+
+	LINKS
+
+************************************/
+
+
+/************************************
+	DEFAULT LINK CONFIG
+
+	Use this to create your base text atom(s).
+	You may overwrite/extend and, all, or none of the CSS properties using the $text map.
+
+************************************/
+
+// Default text styles
+// @extend %text
+$link: (
+	font-family: font-family(text),
+	color: color(cta),
+	cursor: pointer,
+	text-decoration: none,
+	hover: (
+		color: color(cta, 30%, darken),
+	),
+	active: (
+		color: color(cta, dark),
+	),
+);
+
+// Initialize the %link placeholder class - http://thesassway.com/intermediate/understanding-placeholder-selectors
+@include link($link);
+
+
+
+/************************************
+	EO DEFAULT TEXT CONFIG
+************************************/
+
+
+/************************************
+
+	TEXT MODIFIERS
+
+	To create a new modifier, create a new text map.
+	The text map must contain a 'name' key.
+		> 'name' is used to create the placeholder class.
+
+	Responsive Type:
+	If you want to utilize structured, responsive type, use the 'size' key.
+
+	To instnciate, @include the text() mixin with the fourth argument as your new button map.
+
+	Example:
+
+	$NEW-text: (
+		name: 'NEW-text',
+		size: SIZE,
+		css-property: value,
+	);
+	@include button($heading, $NEW-heading);
+
+************************************/
+
+// Text variations
+// @extend %<name>
+$utility-link: (
+	name: link--utility,
+	size: small,
+);@include link($link, $utility-link);
+
+$view-link: (
+	name: link--view-more,
+	size: extra-small,
+	text-transform: uppercase,
+	font-weight: 400,
+);@include link($link, $view-link);
+
+$link--icon-left: (
+	name: 'link--icon-left',
+	before: (
+		font-family: font-family(icons),
+		margin-right: margin(extra-small),
+		content: "",
+	),
+);@include link($link, $link--icon-left);
+
+$link--icon-right: (
+	name: 'link--icon-right',
+	after: (
+		font-family: font-family(icons),
+		margin-left: margin(extra-small),
+		content: "",
+	),
+);@include link($link, $link--icon-right);

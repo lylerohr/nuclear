@@ -1,0 +1,137 @@
+/************************************
+
+	HEADINGS
+
+************************************/
+
+
+/************************************
+	DEFAULT HEADING CONFIG
+
+	Use this to create your base heading atom(s).
+	You may overwrite/extend and, all, or none of the CSS properties using the $heading map.
+
+************************************/
+
+// Default heading styles
+// @extend %heading
+$heading: (
+	font-family: font-family(display),
+	size: giant,
+	color: color(brand-primary),
+	background-color: transparent,
+);@include heading($heading);
+
+/************************************
+	EO DEFAULT HEADING CONFIG
+************************************/
+
+
+/************************************
+
+	HEADING MODIFIERS
+
+	To create a new modifier, create a new heading map.
+	The heading map must contain a 'name' key.
+		> 'name' is used to create the placeholder class.
+
+	Responsive Type:
+	If you want to utilize structured, responsive type, use the 'size' key.
+
+	To instnciate, @include the heading() mixin with the fourth argument as your new heading map.
+
+	Example:
+
+	$NEW-heading: (
+		name: 'NEW-heading',
+		size: 'size',
+		css-property: value,
+	);
+	@include heading($heading, $NEW-heading);
+
+************************************/
+
+/*
+Potential alternate syntax
+
+@include heading($heading, (
+	name: 'name',
+	size: giant,
+));
+*/
+
+// Heading modifiers
+// @extend %<name>
+$heading-monolithic: (
+	name: 'heading--monolithic',
+	size: monolithic,
+	margin: #{1rem 0 2rem},
+	font-weight: 100,
+);@include heading($heading, $heading-monolithic);
+
+$heading-massive: (
+	name: 'heading--massive',
+	size: massive,
+	margin: #{1rem 0 2rem},
+	font-weight: 100,
+);@include heading($heading, $heading-massive);
+
+$heading-giant: (
+	name: 'heading--giant',
+	size: giant,
+	font-weight: 100,
+);@include heading($heading, $heading-giant);
+
+$heading-big: (
+	name: 'heading--big',
+	size: big,
+	font-weight: 100,
+);@include heading($heading, $heading-big);
+
+$heading-small: (
+	name: 'heading--small',
+	size: small,
+	font-weight: bold,
+	color: color(brand-primary, 15%, darken),
+);@include heading($heading, $heading-small);
+
+$heading-extrasmall: (
+	name: 'heading--extrasmall',
+	size: extra-small,
+	font-weight: bold,
+	color: color(brand-primary, 15%, darken),
+);@include heading($heading, $heading-extrasmall);
+
+
+// Special Headings
+$heading-with-subhead: (
+	name: 'heading-with-subhead',
+	size: giant,
+	margin: #{1rem 0 2rem},
+	font-weight: 500,
+	display: inline-block,
+);@include heading($heading, $heading-with-subhead);
+
+$subhead: (
+	name: 'subhead',
+	size: base,
+	display: inline-block,
+	font-weight: 100,
+	margin-left: 1rem,
+	color: color(gray, dark),
+);@include heading($heading, $subhead);
+
+$small-caps: (
+	name: 'small-caps',
+	size: small,
+	font-weight: 100,
+	text-transform: uppercase,
+	font-family: font-family(cd--text),
+);@include heading($heading, $small-caps);
+
+$section-title: (
+	name: 'section-title',
+	margin-top: margin(none),
+	margin-bottom: margin(none),
+	font-family: font-family(text),
+);@include heading($heading, $section-title);
